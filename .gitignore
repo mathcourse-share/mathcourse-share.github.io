@@ -1,0 +1,34 @@
+site/
+
+blog_venv/
+venv/
+env/
+.venv/
+
+# Python 字节码
+__pycache__/
+*.py[cod]
+
+# 操作系统生成的文件
+.DS_Store
+Thumbs.db
+
+# 编辑器/IDE 配置文件
+.vscode/
+.idea/
+
+# 日志文件
+*.log
+
+# 环境变量文件（如果你使用的话）
+.env
+
+docs/Summaries/2024/weekly/2024-W44-10.md
+docs/Summaries/2024/weekly/2024-W45-11.md
+docs/Summaries/2024/weekly/2024-W46-11.md
+docs/Summaries/2024/weekly/2024-W47-11.md
+docs/Summaries/2024/weekly/2024-W48-11.md
+docs/Summaries/2024/weekly/2024-W49-12.md
+docs/Summaries/2024/weekly/2024-W50-12.md
+docs/Summaries/Semesters/2024_1_1.md
+docs/Summaries/Semesters/202409-10.md
