@@ -136,6 +136,9 @@ nav:
   - Home:
       - index.md
       - about.md
+  - course:
+      - how-to-learn&solve-question.md
+      - course.md
   - Blogs:
       - index: Blogs/index.md
       - Archives: Blogs/archives.md
