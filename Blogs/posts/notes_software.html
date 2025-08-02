@@ -1,0 +1,5114 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://mathcourse-share.github.io/Blogs/posts/notes_software.html">
+      
+      
+        <link rel="prev" href="%E7%94%A8AI%E5%90%8E%E7%9A%84%E9%97%AE%E9%A2%98.html">
+      
+      
+        <link rel="next" href="../../Summaries/index.html">
+      
+      
+      <link rel="icon" href="../../assets/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
+    
+    
+      
+        <title>笔记软件选择 - 数学分享站</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+  
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+  
+  <style>:root{--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20448%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.0.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20fill%3D%22currentColor%22%20d%3D%22M64%20480c-35.3%200-64-28.7-64-64V96c0-35.3%2028.7-64%2064-64h320c35.3%200%2064%2028.7%2064%2064v213.5c0%2017-6.7%2033.3-18.7%2045.3L322.7%20461.3c-12%2012-28.3%2018.7-45.3%2018.7zm325.5-176H296c-13.3%200-24%2010.7-24%2024v93.5z%22/%3E%3C/svg%3E');--md-admonition-icon--abstract:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20448%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.0.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20fill%3D%22currentColor%22%20d%3D%22M384%20512H96c-53%200-96-43-96-96V96C0%2043%2043%200%2096%200h304c26.5%200%2048%2021.5%2048%2048v288c0%2020.9-13.4%2038.7-32%2045.3V448c17.7%200%2032%2014.3%2032%2032s-14.3%2032-32%2032zM96%20384c-17.7%200-32%2014.3-32%2032s14.3%2032%2032%2032h256v-64zm32-232c0%2013.3%2010.7%2024%2024%2024h176c13.3%200%2024-10.7%2024-24s-10.7-24-24-24H152c-13.3%200-24%2010.7-24%2024m24%2072c-13.3%200-24%2010.7-24%2024s10.7%2024%2024%2024h176c13.3%200%2024-10.7%2024-24s-10.7-24-24-24z%22/%3E%3C/svg%3E');--md-admonition-icon--info:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.0.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20fill%3D%22currentColor%22%20d%3D%22M256%20512a256%20256%200%201%200%200-512%20256%20256%200%201%200%200%20512m-32-352a32%2032%200%201%201%2064%200%2032%2032%200%201%201-64%200m-8%2064h48c13.3%200%2024%2010.7%2024%2024v88h8c13.3%200%2024%2010.7%2024%2024s-10.7%2024-24%2024h-80c-13.3%200-24-10.7-24-24s10.7-24%2024-24h24v-64h-24c-13.3%200-24-10.7-24-24s10.7-24%2024-24%22/%3E%3C/svg%3E');--md-admonition-icon--tip:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.0.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20fill%3D%22currentColor%22%20d%3D%22M461.2%2018.9C472.7%2024%20480%2035.4%20480%2048v416c0%2012.6-7.3%2024-18.8%2029.1s-24.8%203.2-34.3-5.1l-46.6-40.7c-43.6-38.1-98.7-60.3-156.4-63V480c0%2017.7-14.3%2032-32%2032h-32c-17.7%200-32-14.3-32-32v-96C57.3%20384%200%20326.7%200%20256s57.3-128%20128-128h84.5c61.8-.2%20121.4-22.7%20167.9-63.3L427%2024c9.4-8.3%2022.9-10.2%2034.3-5.1zM224%20320v.2c70.3%202.7%20137.8%2028.5%20192%2073.4V118.3c-54.2%2044.9-121.7%2070.7-192%2073.4z%22/%3E%3C/svg%3E');--md-admonition-icon--success:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20448%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.0.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20fill%3D%22currentColor%22%20d%3D%22M434.8%2070.1c14.3%2010.4%2017.5%2030.4%207.1%2044.7l-256%20352c-5.5%207.6-14%2012.3-23.4%2013.1s-18.5-2.7-25.1-9.3l-128-128c-12.5-12.5-12.5-32.8%200-45.3s32.8-12.5%2045.3%200l101.5%20101.5%20234-321.7c10.4-14.3%2030.4-17.5%2044.7-7.1z%22/%3E%3C/svg%3E');--md-admonition-icon--question:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.0.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20fill%3D%22currentColor%22%20d%3D%22M256%20512a256%20256%200%201%200%200-512%20256%20256%200%201%200%200%20512m0-336c-17.7%200-32%2014.3-32%2032%200%2013.3-10.7%2024-24%2024s-24-10.7-24-24c0-44.2%2035.8-80%2080-80s80%2035.8%2080%2080c0%2047.2-36%2067.2-56%2074.5v3.8c0%2013.3-10.7%2024-24%2024s-24-10.7-24-24v-8.1c0-20.5%2014.8-35.2%2030.1-40.2%206.4-2.1%2013.2-5.5%2018.2-10.3%204.3-4.2%207.7-10%207.7-19.6%200-17.7-14.3-32-32-32zm-32%20192a32%2032%200%201%201%2064%200%2032%2032%200%201%201-64%200%22/%3E%3C/svg%3E');--md-admonition-icon--warning:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.0.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20fill%3D%22currentColor%22%20d%3D%22M256%200c14.7%200%2028.2%208.1%2035.2%2021l216%20400c6.7%2012.4%206.4%2027.4-.8%2039.5S486.1%20480%20472%20480H40c-14.1%200-27.1-7.4-34.4-19.5s-7.5-27.1-.8-39.5l216-400c7-12.9%2020.5-21%2035.2-21m0%20168c-13.3%200-24%2010.7-24%2024v112c0%2013.3%2010.7%2024%2024%2024s24-10.7%2024-24V192c0-13.3-10.7-24-24-24m26.7%20216a26.7%2026.7%200%201%200-53.3%200%2026.7%2026.7%200%201%200%2053.3%200%22/%3E%3C/svg%3E');--md-admonition-icon--failure:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20576%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.0.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20fill%3D%22currentColor%22%20d%3D%22M480-16c6.9%200%2013%204.4%2015.2%2010.9l13.5%2040.4%2040.4%2013.5C555.6%2051%20560%2057.1%20560%2064s-4.4%2013-10.9%2015.2l-40.4%2013.5-13.5%2040.4c-2.2%206.5-8.3%2010.9-15.2%2010.9s-13-4.4-15.2-10.9l-13.5-40.4-40.4-13.5C404.4%2077%20400%2070.9%20400%2064s4.4-13%2010.9-15.2l40.4-13.5%2013.5-40.4C467-11.6%20473.1-16%20480-16M321.4%2097.4c12.5-12.5%2032.8-12.5%2045.3%200l80%2080c12.5%2012.5%2012.5%2032.8%200%2045.3l-10.9%2010.9c7.9%2022%2012.2%2045.7%2012.2%2070.5%200%20114.9-93.1%20208-208%20208S32%20418.9%2032%20304%20125.1%2096%20240%2096c24.7%200%2048.5%204.3%2070.5%2012.3zM144%20304c0-53%2043-96%2096-96%2013.3%200%2024-10.7%2024-24s-10.7-24-24-24c-79.5%200-144%2064.5-144%20144%200%2013.3%2010.7%2024%2024%2024s24-10.7%2024-24%22/%3E%3C/svg%3E');--md-admonition-icon--danger:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.0.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20fill%3D%22currentColor%22%20d%3D%22M416%20427.4c58.5-44%2096-111.6%2096-187.4C512%20107.5%20397.4%200%20256%200S0%20107.5%200%20240c0%2075.8%2037.5%20143.4%2096%20187.4V464c0%2026.5%2021.5%2048%2048%2048h32v-40c0-13.3%2010.7-24%2024-24s24%2010.7%2024%2024v40h64v-40c0-13.3%2010.7-24%2024-24s24%2010.7%2024%2024v40h32c26.5%200%2048-21.5%2048-48zM96%20256a64%2064%200%201%201%20128%200%2064%2064%200%201%201-128%200m256-64a64%2064%200%201%201%200%20128%2064%2064%200%201%201%200-128%22/%3E%3C/svg%3E');--md-admonition-icon--bug:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20640%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.0.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20fill%3D%22currentColor%22%20d%3D%22M352%200c0-17.7-14.3-32-32-32s-32%2014.3-32%2032v64h-96c-53%200-96%2043-96%2096v224c0%2053%2043%2096%2096%2096h256c53%200%2096-43%2096-96V160c0-53-43-96-96-96h-96zM160%20368c0-13.3%2010.7-24%2024-24h32c13.3%200%2024%2010.7%2024%2024s-10.7%2024-24%2024h-32c-13.3%200-24-10.7-24-24m120%200c0-13.3%2010.7-24%2024-24h32c13.3%200%2024%2010.7%2024%2024s-10.7%2024-24%2024h-32c-13.3%200-24-10.7-24-24m120%200c0-13.3%2010.7-24%2024-24h32c13.3%200%2024%2010.7%2024%2024s-10.7%2024-24%2024h-32c-13.3%200-24-10.7-24-24M224%20176a48%2048%200%201%201%200%2096%2048%2048%200%201%201%200-96m144%2048a48%2048%200%201%201%2096%200%2048%2048%200%201%201-96%200m-304%200c0-17.7-14.3-32-32-32S0%20206.3%200%20224v96c0%2017.7%2014.3%2032%2032%2032s32-14.3%2032-32zm544-32c-17.7%200-32%2014.3-32%2032v96c0%2017.7%2014.3%2032%2032%2032s32-14.3%2032-32v-96c0-17.7-14.3-32-32-32%22/%3E%3C/svg%3E');--md-admonition-icon--example:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20448%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.0.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20fill%3D%22currentColor%22%20d%3D%22M288%200H128c-17.7%200-32%2014.3-32%2032s14.3%2032%2032%2032v151.5L7.5%20426.3C2.6%20435%200%20444.7%200%20454.7%200%20486.4%2025.6%20512%2057.3%20512h333.4c31.6%200%2057.3-25.6%2057.3-57.3%200-10-2.6-19.8-7.5-28.4L320%20215.5V64c17.7%200%2032-14.3%2032-32S337.7%200%20320%200zm-96%20215.5V64h64v151.5c0%2011.1%202.9%2022.1%208.4%2031.8L306%20320H142l41.6-72.7c5.5-9.7%208.4-20.6%208.4-31.8%22/%3E%3C/svg%3E');--md-admonition-icon--quote:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20448%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.0.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20fill%3D%22currentColor%22%20d%3D%22M0%20216C0%20149.7%2053.7%2096%20120%2096h8c17.7%200%2032%2014.3%2032%2032s-14.3%2032-32%2032h-8c-30.9%200-56%2025.1-56%2056v8h64c35.3%200%2064%2028.7%2064%2064v64c0%2035.3-28.7%2064-64%2064H64c-35.3%200-64-28.7-64-64zm256%200c0-66.3%2053.7-120%20120-120h8c17.7%200%2032%2014.3%2032%2032s-14.3%2032-32%2032h-8c-30.9%200-56%2025.1-56%2056v8h64c35.3%200%2064%2028.7%2064%2064v64c0%2035.3-28.7%2064-64%2064h-64c-35.3%200-64-28.7-64-64z%22/%3E%3C/svg%3E');}</style>
+
+
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M22%2012a10%2010%200%200%201-10%2010A10%2010%200%200%201%202%2012%2010%2010%200%200%201%2012%202a10%2010%200%200%201%2010%2010M6%2013h8l-3.5%203.5%201.42%201.42L17.84%2012l-5.92-5.92L10.5%207.5%2014%2011H6z%22/%3E%3C/svg%3E');}</style>
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Noto Sans SC";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="数学分享站" class="md-header__button md-logo" aria-label="数学分享站" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            数学分享站
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              笔记软件选择
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="启动暗影模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="启动暗影模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="开启日光模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="开启日光模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/mathcourse-share/mathcourse-share.github.io" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    courseshare
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="数学分享站" class="md-nav__button md-logo" aria-label="数学分享站" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    数学分享站
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/mathcourse-share/mathcourse-share.github.io" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    courseshare
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Home
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Index
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    course
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            course
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to-learn%26solve-question.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    提问的智慧
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    [Protected] 暑假课程和相关作业以及错题
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Blogs
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Blogs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M224 24c0-13.3 10.7-24 24-24 145.8 0 264 118.2 264 264 0 13.3-10.7 24-24 24s-24-10.7-24-24c0-119.3-96.7-216-216-216-13.3 0-24-10.7-24-24M80 96c26.5 0 48 21.5 48 48v224c0 26.5 21.5 48 48 48s48-21.5 48-48-21.5-48-48-48c-8.8 0-16-7.2-16-16v-64c0-8.8 7.2-16 16-16 79.5 0 144 64.5 144 144s-64.5 144-144 144S32 447.5 32 368V144c0-26.5 21.5-48 48-48m168 0c92.8 0 168 75.2 168 168 0 13.3-10.7 24-24 24s-24-10.7-24-24c0-66.3-53.7-120-120-120-13.3 0-24-10.7-24-24s10.7-24 24-24"/></svg>
+  
+  <span class="md-ellipsis">
+    index
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archives.html" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 3h18v4H3zm1 5h16v13H4zm5.5 3a.5.5 0 0 0-.5.5V13h6v-1.5a.5.5 0 0 0-.5-.5z"/></svg>
+  
+  <span class="md-ellipsis">
+    Archives
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Posts
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Posts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="24-12-29.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    工作规律
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="24-12-30.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    信息
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="25-01-20.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    近期的一些想法
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="FreeSplatter%20%E4%BB%A3%E7%A0%81%E8%A7%A3%E8%AF%BB.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FreeSplatter 代码解读
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Gaussian_Splatting_Code.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gaussian_Splatting_Code
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Gaussian_Splatting_%E5%A4%8D%E7%8E%B0.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gaussian Splatting 复现
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="OCRN.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Beyond Object Recognition: A New Benchmark towards Object Concept Learning
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ULIP-2.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ULIP-2: Towards Scalable Multimodal Pre-training for 3D Understanding
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E7%94%A8AI%E5%90%8E%E7%9A%84%E9%97%AE%E9%A2%98.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    一些 AI 与个人学习的思考
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    笔记软件选择
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="notes_software.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    笔记软件选择
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      我对笔记软件的要求
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      个人笔记软件使用情况
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      我目前的笔记软件使用情况
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="我目前的笔记软件使用情况">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#obsidian" class="md-nav__link">
+    <span class="md-ellipsis">
+      Obsidian：可编程知识中枢
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      飞书：协同认知空间
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      如果你想要选择一个笔记软件
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      笔记本身的形式
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="笔记本身的形式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 手写笔记：感官沉浸与非线性思维
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-markdownvimorg-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 纯文本（Markdown/Vim/Org-mode）：极简主义与系统思维
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-notion" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 富文本（Notion/飞书）：视觉叙事与协作导向
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-roamtana" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. 结构化数据（Roam/Tana）：网状思维与认知涌现
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-onenoteheptabase" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. 多媒体融合（OneNote/Heptabase）：跨模态思维
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-jupyter-notebookobsidian-dataview" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. 代码驱动型（Jupyter Notebook/Obsidian Dataview）：量化思维
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      选择背后的元问题
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pkm" class="md-nav__link">
+    <span class="md-ellipsis">
+      PKM（个人知识管理）：在解决问题与构建体系之间找到平衡
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PKM（个人知识管理）：在解决问题与构建体系之间找到平衡">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      解决问题的即时性与知识体系的长期性
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pkm_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      PKM 的核心原则：动态平衡与递归整合
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pkm_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      PKM 的实践：从碎片到体系
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pkm_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      PKM 的长期价值：从知识工作者到知识创造者
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pkm_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      如何构建一个 PKM
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="如何构建一个 PKM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      知识工程的二象性模型
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      知识演化的三重熔炉
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      避免知识管理中的热力学陷阱
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      认知复利增长模型
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Summaries
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Summaries
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Summaries/index.html" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 1h2v2h8V1h2v2h1a2 2 0 0 1 2 2v14c0 1.11-.89 2-2 2H5a2 2 0 0 1-2-2V5c0-1.11.89-2 2-2h1zM5 8v11h14V8zm2 2h10v2H7z"/></svg>
+  
+  <span class="md-ellipsis">
+    Summaries
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Weekly
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Weekly
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2_1" id="__nav_4_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    2024
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            2024
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Summaries/2024/weekly/2024-W44-10.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    None
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Summaries/2024/weekly/2024-W45-11.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    None
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Summaries/2024/weekly/2024-W46-11.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    None
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Summaries/2024/weekly/2024-W47-11.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    None
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Summaries/2024/weekly/2024-W48-11.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    None
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Summaries/2024/weekly/2024-W49-12.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    None
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Summaries/2024/weekly/2024-W50-12.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    None
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Summaries/2024/weekly/2024-W51-12.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2024-W51-12
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Summaries/2024/weekly/2024-W52-12.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2024-W52-12
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2_2" id="__nav_4_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    2025
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            2025
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Summaries/2025/weekly/2025-W01-12.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2025-W01-12
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Summaries/2025/weekly/2025-W02-01.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2025-W02-01
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Summaries/2025/weekly/2025-W03-01.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2025-W03-01
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Summaries/2025/weekly/2025-W04-01.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2025-W04-01
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Summaries/2025/weekly/2025-W05-01.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2025-W05-01
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Semesters
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Semesters
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Summaries/Semesters/202409-10.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    None
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Summaries/Semesters/2024_1_1.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    None
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Summaries/Semesters/2024summer_vacation.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2024年高三-大一暑假总结
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Computer Basic
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Computer Basic
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS_Basic/index.html" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 22a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2h-6v7L9.5 7.5 7 9V2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2z"/></svg>
+  
+  <span class="md-ellipsis">
+    Computer Science Basic
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS_Basic/15-213/CSAPP.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CSAPP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    C++
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            C++
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS_Basic/C%2B%2B/Accelerated%20C%2B%2B.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Accelerated C++
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS_Basic/C%2B%2B/C%2B%2B%20Basic.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    C++
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    CS61
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            CS61
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS_Basic/CS61A/CS61A.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CS61A
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS_Basic/CS61A/Composing_Programs.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    COMPOSING PROGRAMS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS_Basic/CS61C/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E7%A1%AC%E4%BB%B6%E8%BD%AF%E4%BB%B6%E6%8E%A5%E5%8F%A3.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    计算机组成与设计硬件软件接口
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_5" id="__nav_5_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Network
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_5">
+            <span class="md-nav__icon md-icon"></span>
+            Network
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS_Basic/Network/Security.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Security
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    AI
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            AI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AI/index.html" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 22a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2h-6v7L9.5 7.5 7 9V2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2z"/></svg>
+  
+  <span class="md-ellipsis">
+    Artificial Intelligence
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Basic
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            Basic
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AI/Dive_into_Deep_Learning.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dive into Deep Learning
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AI/SLAM14.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    视觉SLAM十四讲
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AI/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    统计学习方法
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    CS231n
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            CS231n
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AI/CS231n/CS231n_notes.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Computer Vision
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AI/CS231n/Image%20Classification-Data-driven%20Approach%2C%20k-Nearest%20Neighbor%2C%20train_val_test%20splits.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Image Classification-Data-driven Approach, k-Nearest Neighbor, train_val_test splits
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AI/CS231n/Linear%20classification-Support%20Vector%20Machine%2C%20Softmax.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Linear classification-Support Vector Machine, Softmax
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AI/CS231n/Numpy.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Numpy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    EECS 498-007
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            EECS 498-007
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AI/EECS%20498-007/KNN.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    KNN
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AI/EECS%20498-007/Pytorch.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    pytorch 的基本使用
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AI/EECS%20498-007/linear_classifer.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Linear classifer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_5" id="__nav_6_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    FFB6D
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_5">
+            <span class="md-nav__icon md-icon"></span>
+            FFB6D
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AI/FFB6D/FFB6D_Conda.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FFB6D环境配置指南：原生系统安装
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AI/FFB6D/FFB6D_Docker.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Docker从入门到实践：以FFB6D环境配置为例
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Robot
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Robot
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Robot/index.html" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 22a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2h-6v7L9.5 7.5 7 9V2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2z"/></svg>
+  
+  <span class="md-ellipsis">
+    Robot
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Robot/calibration.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Calibration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Robot/kalman.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    卡尔曼滤波
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Robot/pnp.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    pnp
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tools
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Tools
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tools/index.html" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16h-2v-1H8v1H6v-1H2v5h20v-5h-4zm2-8h-3V6c0-1.1-.9-2-2-2H9c-1.1 0-2 .9-2 2v2H4c-1.1 0-2 .9-2 2v4h4v-2h2v2h8v-2h2v2h4v-4c0-1.1-.9-2-2-2m-5 0H9V6h6z"/></svg>
+  
+  <span class="md-ellipsis">
+    Toolbox
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_2" id="__nav_8_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Cheat Sheet
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_2">
+            <span class="md-nav__icon md-icon"></span>
+            Cheat Sheet
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tools/Cheat%20Sheet/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cheat Sheet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_2_2" id="__nav_8_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    tools
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_8_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            tools
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tools/Cheat%20Sheet/tools/adb%20Cheat%20Sheet.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    adb Cheat Sheet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tools/Cheat%20Sheet/tools/bash%20Cheat%20Sheet.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    bash Cheat Sheet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tools/Cheat%20Sheet/tools/ffmpeg%20Cheat%20Sheet.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ffmpeg Cheat Sheet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tools/Cheat%20Sheet/tools/gdb%20Cheat%20Sheet.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    gdb Cheat Sheet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tools/Cheat%20Sheet/tools/git%20Cheat%20Sheet.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    git
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tools/Cheat%20Sheet/tools/ip%20Cheat%20Sheet.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ip Cheat Sheet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tools/Cheat%20Sheet/tools/tmux%20Cheat%20Sheet.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    tmux Cheat Sheet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_2_3" id="__nav_8_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    editors
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_8_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            editors
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tools/Cheat%20Sheet/editors/emacs%20Cheat%20Sheet.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    emacs Cheat Sheet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tools/Cheat%20Sheet/editors/nano%20Cheat%20Sheet.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    nano Cheat Sheet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tools/Cheat%20Sheet/editors/org%20Cheat%20Sheet.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    org Cheat Sheet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tools/Cheat%20Sheet/editors/vim%20Cheat%20Sheet.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    vim Cheat Sheet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_2_4" id="__nav_8_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    languages
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_8_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            languages
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tools/Cheat%20Sheet/languages/javascript%20Cheat%20Sheet.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    javascript Cheat Sheet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tools/Cheat%20Sheet/languages/python%20Cheat%20Sheet.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    python Cheat Sheet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tools/Cheat%20Sheet/languages/vimscript%20Cheat%20Sheet.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    VimScript Cheat Sheet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_3" id="__nav_8_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    AI
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_3">
+            <span class="md-nav__icon md-icon"></span>
+            AI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tools/AI/prompt.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    prompt
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tools/AI/prompt_writing.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AI 使用
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_4" id="__nav_8_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Blog
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_4">
+            <span class="md-nav__icon md-icon"></span>
+            Blog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tools/Blog/Mkdocs_Material.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    mkdocs material 超全配置
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_5" id="__nav_8_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Environment
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_5">
+            <span class="md-nav__icon md-icon"></span>
+            Environment
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tools/Environment/Ubuntu_setup.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ubuntu 配置
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tools/Environment/environment.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Environment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tools/Environment/obsidian_setup.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    obsidian 配置
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_6" id="__nav_8_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Make
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_6">
+            <span class="md-nav__icon md-icon"></span>
+            Make
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tools/Make/CMake.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CMake 相关
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tools/Make/Makeflie.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Makeflie
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_7" id="__nav_8_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Others
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_7">
+            <span class="md-nav__icon md-icon"></span>
+            Others
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tools/Others/Chezmoi.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    用 chezmoi 实现跨设备同步配置
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tools/Others/SSH.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SSH配置指南
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tools/Others/zotero_%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    zotero_使用指南
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_8" id="__nav_8_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Terminal
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_8">
+            <span class="md-nav__icon md-icon"></span>
+            Terminal
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tools/Terminal/Tabby_Zsh.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tabby + Zsh 配置指南
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tags
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Tags
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tags/index.html" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.5 7A1.5 1.5 0 0 1 4 5.5 1.5 1.5 0 0 1 5.5 4 1.5 1.5 0 0 1 7 5.5 1.5 1.5 0 0 1 5.5 7m15.91 4.58-9-9C12.05 2.22 11.55 2 11 2H4c-1.11 0-2 .89-2 2v7c0 .55.22 1.05.59 1.41l8.99 9c.37.36.87.59 1.42.59s1.05-.23 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.56-.23-1.06-.59-1.42"/></svg>
+  
+  <span class="md-ellipsis">
+    Tags
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      我对笔记软件的要求
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      个人笔记软件使用情况
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      我目前的笔记软件使用情况
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="我目前的笔记软件使用情况">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#obsidian" class="md-nav__link">
+    <span class="md-ellipsis">
+      Obsidian：可编程知识中枢
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      飞书：协同认知空间
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      如果你想要选择一个笔记软件
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      笔记本身的形式
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="笔记本身的形式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 手写笔记：感官沉浸与非线性思维
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-markdownvimorg-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 纯文本（Markdown/Vim/Org-mode）：极简主义与系统思维
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-notion" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 富文本（Notion/飞书）：视觉叙事与协作导向
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-roamtana" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. 结构化数据（Roam/Tana）：网状思维与认知涌现
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-onenoteheptabase" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. 多媒体融合（OneNote/Heptabase）：跨模态思维
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-jupyter-notebookobsidian-dataview" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. 代码驱动型（Jupyter Notebook/Obsidian Dataview）：量化思维
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      选择背后的元问题
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pkm" class="md-nav__link">
+    <span class="md-ellipsis">
+      PKM（个人知识管理）：在解决问题与构建体系之间找到平衡
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PKM（个人知识管理）：在解决问题与构建体系之间找到平衡">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      解决问题的即时性与知识体系的长期性
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pkm_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      PKM 的核心原则：动态平衡与递归整合
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pkm_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      PKM 的实践：从碎片到体系
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pkm_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      PKM 的长期价值：从知识工作者到知识创造者
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pkm_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      如何构建一个 PKM
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="如何构建一个 PKM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      知识工程的二象性模型
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      知识演化的三重熔炉
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      避免知识管理中的热力学陷阱
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      认知复利增长模型
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+
+                  
+<a href="https://github.com/mathcourse-share/mathcourse-share.github.io/edit/master/docs/Blogs/posts/notes_software.md" title="edit.link.title" class="md-content__button md-icon">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
+</a>
+
+
+<h1 id="_1">笔记软件选择</h1>
+<p>在这篇文章中，我主要会分享我个人的笔记发展历程。穿插一些问题的思考。</p>
+<blockquote>
+<p>注意，文中有大量 deepseek 生成内容，真实性请自行判断。</p>
+</blockquote>
+<h2 id="_2">我对笔记软件的要求</h2>
+<p>这笔记软件的不断更换实际上是对这几个问题的不同选择：</p>
+<ol>
+<li>商业化运营 vs 非商业化运营</li>
+<li>本地 vs 在线</li>
+<li>笔记形式<ol>
+<li>纯文本 vs 富文本</li>
+</ol>
+</li>
+<li>平台支持</li>
+<li>社区生态</li>
+</ol>
+<p>你也可以自己思考思考这几个问题。</p>
+<p>对于我个人来说，我需要笔记软件满足以下的几个需求：</p>
+<ul>
+<li>必须：<ol>
+<li>文件可导出成 markdown 格式。方便后续发布到博客上以及迁移。倘若笔记软件跑路或者不再继续维护，也可以拿着 markdown 找下一家。</li>
+<li>支持双链，markdown 语法的直接书写，支持数学公式，支持引用，代码块，tag。</li>
+<li>有比较好的生态，比较多的插件来提升体验。</li>
+<li>支持跨平台，至少要有 windows 11, Ubuntu。（不过现在可能不需要了，我已经完全切换到 linux 环境中。）</li>
+<li>能够进行比较方便的同步和备份。</li>
+</ol>
+</li>
+<li>可选：<ol>
+<li>文件嵌套格式。如<img alt="image.png" src="https://raw.githubusercontent.com/WncFht/picture/main/20250129201719239.png" /></li>
+<li>协同实时编辑功能。但是这也意味着编辑时不会很流畅。</li>
+<li>支持图床。（主要是发布和迁移如果没有图床太难搞了）</li>
+<li>有论坛，和比较完整的入门教程。</li>
+<li>不需要 all in one, PDF 和视频最好不要放到笔记里面来。</li>
+</ol>
+</li>
+</ul>
+<h2 id="_3">个人笔记软件使用情况</h2>
+<p>我的电子化笔记大概是从初中开始的。</p>
+<ul>
+<li>初中<ul>
+<li>主要使用幕布，大纲式笔记，方便梳理知识点和列 TODO list。<ul>
+<li>实际上在 markdown 文件中只是无序列表的一个功能而已。</li>
+</ul>
+</li>
+<li>用过印象笔记<ul>
+<li>当时好像主要卖点是收纳信息，方便从网上收纳到笔记中。编辑体验也还不错，但是后来因为会员以及过多的广告而停止使用。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>高中<ul>
+<li>疫情时期上网课，主要使用 notability 以及 goodnote 等手写笔记软件。</li>
+<li>比较方便地标注 PPT 和电子书，以及写作业，绘图。这些都是手写笔记的优点。</li>
+<li>缺点就是不方便整理和搜索，进行二次开发，进一步完善笔记。同时手写速度会有上限。</li>
+<li>这一系列还有 OneNote 等。</li>
+</ul>
+</li>
+<li>大学<ul>
+<li>obsidian<ul>
+<li>在插件的加成下，基本满足我的要求</li>
+<li>插件生态好</li>
+<li>满足我的基本所有要求，只是有些插件做的还不够好，比如文件嵌套。</li>
+</ul>
+</li>
+<li>notion<ul>
+<li>网卡，编辑体验差</li>
+<li>虽然可以进行协同编辑，但是卡（</li>
+<li>文件嵌套</li>
+<li>块语法，编辑相对 obsidian 来说不够流畅。</li>
+<li>可以塞其他文件</li>
+</ul>
+</li>
+<li>飞书<ul>
+<li>也有点卡，但是相对好很多了</li>
+<li>有知识库，内置的文件嵌套</li>
+<li>方便分享，同时可以协同编辑</li>
+<li>编辑相对 obsidian 来说不够流畅</li>
+<li>可以塞其他文件</li>
+<li>类似软件有语雀，大学生可以认证获取一年会员。但是付费不太友好。</li>
+</ul>
+</li>
+<li>思源<ul>
+<li>本地化，很流畅</li>
+<li>同步功能需付费</li>
+<li>文件嵌套</li>
+<li>有很多功能，但是有点过于累赘了</li>
+<li>插件生态较差</li>
+<li>基本满足所有需求，适合开箱即用的朋友。可 DIY 性不高。</li>
+</ul>
+</li>
+<li>zotero<ul>
+<li>感觉批注不方便，依旧喜欢一边看 PDF, 一边记录内容的方式。</li>
+<li>不喜欢拿 zotero 和 obsidian 强行联动，过分复杂且丑陋。</li>
+<li>同步不行</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="_4">我目前的笔记软件使用情况</h2>
+<ul>
+<li>个人笔记主要使用 obsidian<ul>
+<li>使用 PicGo + GitHub + Image auto upload 实现图床</li>
+<li>用 mkdocs 发布博客，支持双链和 callouts。</li>
+<li>用 Export Image plugin 导出成图片形式，发布到小红书等 markdown 不友好平台。</li>
+<li>用 Git 进行自动备份和同步（不需要同时编辑，所以可以进行同步）</li>
+<li>用 Latex Suite + Completr支持 <span class="arithmatex">\(\LaTeX\)</span> 数学公式</li>
+<li>用 Auto Link Tile + Easy Typing + Linter + Outliner + Image Toolkit + Paste image rename 增强编辑体验，自动格式化，自动获取链接名称，增强图片查看。</li>
+<li>用 Templater 优化工作流</li>
+<li>用 Calendar + Periodic Notes 写日记，搭配模板降低复盘压力，同时支持 TODO 功能。</li>
+<li>用 TagFolder 管理 Tag, 实现 Tag + 文件夹 + 双链多重方式索引管理文件。</li>
+<li>用 Style Settings + MySnippets 管理主题，好看的界面更让人想写笔记。</li>
+<li>（可选）用 Envelope 自动转换特殊语法，并结合 Hugo 等框架进行发送。</li>
+<li>（可选）用 Dataview 实现数据库功能（不过我不喜欢，会降低编辑流畅度）</li>
+</ul>
+</li>
+<li>团队协作主要使用飞书<ul>
+<li>可以说是做的最好的团队协作笔记软件，在团队协作方面的第一选择。</li>
+<li>支持知识库形式，且免费。</li>
+<li>可以通过链接邀请进行编辑，不需要充会员。</li>
+<li>支持数学公式，markdown 语法，支持双链！</li>
+<li>在线，不需要同步。</li>
+<li>无 Calendar, 但是 notion 有。</li>
+</ul>
+</li>
+</ul>
+<p>🤔，顺便贴一下 deepseek 优化以后的版本：</p>
+<blockquote>
+<h3 id="obsidian">Obsidian：可编程知识中枢</h3>
+<p>作为个人知识管理的核心工具，Obsidian 通过模块化插件体系实现了「知识操作系统」的定位：</p>
+<ul>
+<li><strong>数据主权架构</strong><ul>
+<li>基于本地Markdown文件存储，通过Git实现版本控制与跨设备同步（Windows/Linux/macOS全兼容）</li>
+<li>采用PicGo+GitHub构建去中心化图床，实现媒体资产与文本的原子化分离管理</li>
+</ul>
+</li>
+<li><strong>认知增强矩阵</strong><ul>
+<li>公式系统：Latex Suite+Completr 实现论文级数学表达，支持实时渲染与语义补全</li>
+<li>输入优化：Paste image rename+Image Toolkit 重构媒体处理流，降低认知中断频率</li>
+<li>知识拓扑：通过TagFolder插件实现三维索引（标签×文件夹×双链），建立非对称信息网络</li>
+</ul>
+</li>
+<li><strong>创作扩展生态</strong><ul>
+<li>发布管道：mkdocs/Envelope 实现「一次编写，多端发布」，适配博客、社交媒体等多重场景</li>
+<li>时间管理：Calendar+Periodic Notes 构建时空坐标系统，将日记/TODO与知识节点动态绑定</li>
+<li>界面工程：Style Settings+MySnippets 实施视觉降噪策略，维持心流状态下的最小视觉熵值</li>
+</ul>
+</li>
+</ul>
+<p><em>注：刻意规避Dataview等结构化插件，保持Markdown的文本纯洁性，避免陷入伪数据库建模陷阱</em></p>
+<h3 id="_5">飞书：协同认知空间</h3>
+<p>在团队协作场景中，飞书展现了SaaS时代知识工具的典型进化特征：</p>
+<ul>
+<li><strong>群体心智接口</strong><ul>
+<li>实时协同引擎：采用OT+CRDT混合算法，在保持低延迟编辑的同时规避版本冲突风险</li>
+<li>知识拓扑支持：通过「知识库+多维表格」构建立体信息架构，实现文档-数据-流程的三元融合</li>
+</ul>
+</li>
+<li><strong>轻量级学术支持</strong><ul>
+<li>内置KaTeX引擎支持学术写作基础需求，双链语法降低团队知识图谱构建门槛</li>
+<li>免费版提供100GB云存储空间，满足中小型团队非结构化知识资产管理</li>
+</ul>
+</li>
+<li><strong>生态位优势</strong><ul>
+<li>相比Notion的海外服务器延迟问题，国内部署节点保证毫秒级响应</li>
+<li>相较于语雀的教育认证限制，其永久免费策略更适合初创团队敏捷迭代</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h2 id="_6">如果你想要选择一个笔记软件</h2>
+<p>这里有一个表格可以作为参考，欢迎补充：</p>
+<table>
+<thead>
+<tr>
+<th>工具/特点</th>
+<th>商业/非商业</th>
+<th>开源/闭源</th>
+<th>存储方式</th>
+<th>文本格式</th>
+<th>强生态</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vim/NeoVim/VsCode</td>
+<td>非商业</td>
+<td>开源</td>
+<td>本地</td>
+<td>纯文本</td>
+<td>有</td>
+</tr>
+<tr>
+<td>Emacs/Org mode</td>
+<td>非商业</td>
+<td>开源</td>
+<td>本地</td>
+<td>纯文本</td>
+<td>有</td>
+</tr>
+<tr>
+<td>Logseq</td>
+<td>非商业</td>
+<td>开源</td>
+<td>本地 + 在线</td>
+<td>纯文本</td>
+<td>无</td>
+</tr>
+<tr>
+<td>思源笔记</td>
+<td>非商业</td>
+<td>开源</td>
+<td>本地 + 在线</td>
+<td>富文本</td>
+<td>无</td>
+</tr>
+<tr>
+<td>Obsidian</td>
+<td>非商业</td>
+<td>闭源</td>
+<td>本地</td>
+<td>纯文本</td>
+<td>有</td>
+</tr>
+<tr>
+<td>Joplin</td>
+<td>非商业</td>
+<td>开源</td>
+<td>本地</td>
+<td>纯文本</td>
+<td>无</td>
+</tr>
+<tr>
+<td>Notion</td>
+<td>商业</td>
+<td>闭源</td>
+<td>在线</td>
+<td>富文本</td>
+<td>有</td>
+</tr>
+<tr>
+<td>Wolai</td>
+<td>商业</td>
+<td>闭源</td>
+<td>在线</td>
+<td>富文本</td>
+<td>无</td>
+</tr>
+<tr>
+<td>Flowus</td>
+<td>商业</td>
+<td>闭源</td>
+<td>在线</td>
+<td>富文本</td>
+<td>无</td>
+</tr>
+<tr>
+<td>RoamResearch</td>
+<td>商业</td>
+<td>闭源</td>
+<td>在线</td>
+<td>富文本 (JSON)</td>
+<td>无</td>
+</tr>
+<tr>
+<td>Tana</td>
+<td>商业</td>
+<td>闭源</td>
+<td>在线</td>
+<td>富文本</td>
+<td>无</td>
+</tr>
+<tr>
+<td>AppFlowy</td>
+<td>非商业</td>
+<td>开源</td>
+<td>本地</td>
+<td>富文本</td>
+<td>无</td>
+</tr>
+<tr>
+<td>Affine</td>
+<td>非商业</td>
+<td>开源</td>
+<td>本地 + 在线</td>
+<td>富文本</td>
+<td>无</td>
+</tr>
+<tr>
+<td>Trilium</td>
+<td>非商业</td>
+<td>开源</td>
+<td>本地</td>
+<td>富文本</td>
+<td>无</td>
+</tr>
+<tr>
+<td>OneNote</td>
+<td>商业</td>
+<td>闭源</td>
+<td>本地 + 在线</td>
+<td>富文本</td>
+<td>有</td>
+</tr>
+<tr>
+<td>Heptabase</td>
+<td>商业</td>
+<td>闭源</td>
+<td>在线</td>
+<td>富文本</td>
+<td>无</td>
+</tr>
+<tr>
+<td>飞书</td>
+<td>商业</td>
+<td>闭源</td>
+<td>在线</td>
+<td>富文本</td>
+<td>无</td>
+</tr>
+<tr>
+<td>语雀</td>
+<td>商业</td>
+<td>闭源</td>
+<td>在线</td>
+<td>富文本</td>
+<td>无</td>
+</tr>
+<tr>
+<td>Notability / Goodnotes</td>
+<td>商业</td>
+<td>闭源</td>
+<td>本地</td>
+<td>富文本</td>
+<td>无</td>
+</tr>
+<tr>
+<td>Zotero</td>
+<td>非商业</td>
+<td>闭源</td>
+<td>本地</td>
+<td>富文本</td>
+<td>有</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_7">笔记本身的形式</h2>
+<p>但是实际上笔记软件对应着笔记的不同形式，有的人喜欢手写，有的人喜欢用 Word, 有的人甚至纯用 Vim, 也有喜欢用 <span class="arithmatex">\(\LaTeX\)</span> 的。</p>
+<p>我想这笔记的形式也对应着不同的学习风格。</p>
+<p>笔记的形式与学习风格之间的关联，本质上反映了不同人群在信息处理、知识内化及思维呈现上的差异。这些差异往往由个人认知习惯、学科需求、创作场景共同塑造。</p>
+<h3 id="1">1. 手写笔记：感官沉浸与非线性思维</h3>
+<ul>
+<li><strong>适用场景</strong>：数理推导、草图绘制、课堂速记。</li>
+<li><strong>学习风格</strong>：<ul>
+<li><strong>动觉型学习者</strong>：通过手部动作强化记忆锚点，如化学分子结构的手绘能帮助建立空间想象。</li>
+<li><strong>碎片重组者</strong>：在纸张空白处随意添加箭头、批注，适合需要反复调整逻辑链条的创意性思考。</li>
+</ul>
+</li>
+<li><strong>工具进化</strong>：GoodNotes 等数字化手写工具通过「图层分离」「矢量笔迹」功能，实现了传统手写与电子检索的平衡。但本质仍是「模拟现实」——正如物理学家费曼坚持用纸笔推演公式，认为触感反馈能激活深层思维。</li>
+</ul>
+<h3 id="2-markdownvimorg-mode">2. 纯文本（Markdown/Vim/Org-mode）：极简主义与系统思维</h3>
+<ul>
+<li><strong>典型用户</strong>：程序员、学术研究者、知识体系构建者。</li>
+<li><strong>核心优势</strong>：<ul>
+<li><strong>低认知负荷</strong>：摆脱格式工具栏干扰，专注内容本身。例如 Vim 用户通过快捷键实现「思维流不间断」。</li>
+<li><strong>可编程性</strong>：用代码思维管理笔记，如 Org-mode 用 <code>#+BEGIN_SRC</code> 块直接执行 Python 脚本处理数据。</li>
+</ul>
+</li>
+<li><strong>隐喻延伸</strong>：纯文本爱好者常将笔记视为「知识代码库」——双链是函数调用，标签是版本分支，通过 Git 实现「知识迭代管理」。这种思维模型尤其适合需要长期演进的技术文档或研究课题。</li>
+</ul>
+<h3 id="3-notion">3. 富文本（Notion/飞书）：视觉叙事与协作导向</h3>
+<ul>
+<li><strong>设计哲学</strong>：将文档看作「可交互的信息仪表盘」。</li>
+<li><strong>典型用例</strong>：<ul>
+<li><strong>产品经理</strong>：在 Notion 中嵌入 Figma 原型、用户反馈数据库、甘特图，构建需求全景视图。</li>
+<li><strong>学生团队</strong>：用飞书多维表格管理实验数据，@提及成员更新进度，形成异步协作闭环。</li>
+</ul>
+</li>
+<li><strong>认知陷阱</strong>：过度装饰的排版可能沦为「数字手账」，陷入形式大于内容的自我感动。真正高效者会像建筑师使用 CAD 软件般克制——用块结构（Block）搭建信息骨架，而非沉迷渐变色图标。</li>
+</ul>
+<h3 id="4-roamtana">4. 结构化数据（Roam/Tana）：网状思维与认知涌现</h3>
+<ul>
+<li><strong>革命性特征</strong>：将「文本」解构为「原子化块（Block）」，通过双向链接形成知识图谱。</li>
+<li><strong>认知科学依据</strong>：<ul>
+<li><strong>Zettelkasten 卡片盒</strong>：社会学家卢曼的 55000 张卡片证明，碎片化输入+主动连接能激发创造性洞见。</li>
+<li><strong>渐进式总结</strong>：Tiago Forte 提出的「信息炼金术」——通过多层级折叠（Bullet→段落→思维导图）实现知识蒸馏。</li>
+</ul>
+</li>
+<li><strong>风险预警</strong>：初学者易陷入「链接狂热」，给每个名词添加双链反而导致认知过载。高阶用户会像园丁修剪枝条般，定期用 Graph Analysis 插件清除低价值节点。</li>
+</ul>
+<h3 id="5-onenoteheptabase">5. 多媒体融合（OneNote/Heptabase）：跨模态思维</h3>
+<ul>
+<li><strong>独特价值</strong>：突破文本单一维度，实现「视觉-听觉-触觉」协同记忆。</li>
+<li><strong>实践案例</strong>：<ul>
+<li><strong>医学解剖</strong>：在 OneNote 中叠加 3D 模型切片、课堂录音、手写标注，构建多感官学习网络。</li>
+<li><strong>设计思考</strong>：Heptabase 的白板功能允许将用户访谈视频、情绪版图片、用户旅程图进行空间化排布，触发右脑直觉思维。</li>
+</ul>
+</li>
+<li><strong>硬件依赖</strong>：此类笔记效能与设备密切相关，如 Surface Pen 的 4096 级压感对素描笔记至关重要，普通触控笔则难以实现细腻笔触。</li>
+</ul>
+<h3 id="6-jupyter-notebookobsidian-dataview">6. 代码驱动型（Jupyter Notebook/Obsidian Dataview）：量化思维</h3>
+<ul>
+<li><strong>前沿趋势</strong>：当笔记系统具备图灵完备性，知识管理开始向「可计算知识」进化。</li>
+<li><strong>典型模式</strong>：<ul>
+<li><strong>动态文档</strong>：在 Jupyter 中混合 Markdown 与 Python 代码，实时运行数据分析并可视化结果。</li>
+<li><strong>自动化工作流</strong>：用 Obsidian 的 Dataview 插件将笔记转化为数据库，执行 SQL 式查询生成动态列表（如 <code>列出所有包含"待评审"标签的论文摘要</code> ）。</li>
+</ul>
+</li>
+<li><strong>思维跃迁</strong>：这种方式将「记录」升级为「知识引擎」，如同数学家 Stephen Wolfram 倡导的「计算型知识」——笔记不仅是记忆载体，更是产生新知的实验平台。</li>
+</ul>
+<h2 id="_8">选择背后的元问题</h2>
+<p>无论选择何种形式，最终都在回答三个本质问题：
+1. <strong>知识流动性</strong>：你的笔记是封闭的档案馆，还是可重组的思想乐高？
+2. <strong>认知摩擦系数</strong>：工具在何种程度上成为思维的延伸而非阻碍？
+3. <strong>时间贴现率</strong>：当下投入的格式化时间，未来会以何种复利形式回报？</p>
+<p>一个值得警惕的现象是：许多人把「优化笔记方法论」本身变成了一种生产力表演。真正有效的系统往往呈现「隐形性」——就像呼吸不需要思考如何呼吸，当你不再纠结于工具切换，而是让笔记自然地成为思维的体外缓存时，或许才是找到了属于自己的「元解决方案」。</p>
+<h2 id="pkm">PKM（个人知识管理）：在解决问题与构建体系之间找到平衡</h2>
+<p>使用 deepseek 进行完善和润色。</p>
+<blockquote>
+<p>关于面向解决问题学习和系统学习的思考
+即：只要解决问题就好还是构建完整知识体系
+我个人认为这两者应该权衡而不是偏向于任何一侧：我们应该解决问题，并递归至自己熟悉的领域，记下来这个问题的解决方案，并在日后重新归纳到自己的知识体系中。同时我们要构建完整的知识体系，比如学习计算机的四大件。纵使科研可以学一些基础知识，比如深度学习，然后就可以直接去看论文，但是那不免于成为调包侠。
+更长远的讲，如果不构建完整知识体系，那么你只不过是一个会 google 的 Ctrl C/V er, 仍然是廉价劳动力，具体可更换性。
+所以建立 PKM 就很重要了。</p>
+</blockquote>
+<p>在知识管理的实践中，我们常常面临一个根本性的问题：<strong>是应该专注于解决眼前的问题，还是致力于构建一个完整的知识体系？</strong> 这个问题并没有一个非黑即白的答案，而是需要在两者之间找到一个动态的平衡。PKM（Personal Knowledge Management，个人知识管理）的核心目标就是帮助我们在解决具体问题的同时，逐步构建并完善自己的知识体系，从而实现长期的认知复利。</p>
+<h4 id="_9">解决问题的即时性与知识体系的长期性</h4>
+<ul>
+<li><strong>解决问题的即时性</strong>：<ul>
+<li><strong>快速响应需求</strong>：在面对具体问题时，我们往往需要快速找到解决方案。这种“解决问题导向”的学习方式能够迅速满足当下的需求，尤其是在工作或学习中遇到紧急任务时。</li>
+<li><strong>递归至熟悉领域</strong>：解决问题的过程中，我们通常会从已知的知识出发，逐步扩展到新的领域。通过这种方式，我们可以将新知识与已有的知识体系进行连接，形成更深层次的理解。</li>
+<li><strong>记录解决方案</strong>：每次解决问题的过程都应该被记录下来，形成可复用的知识片段。这些片段不仅是未来的参考，也是构建知识体系的基础。</li>
+</ul>
+</li>
+<li><strong>知识体系的长期性</strong>：<ul>
+<li><strong>系统性学习</strong>：构建完整的知识体系需要系统性的学习，尤其是在基础学科领域。例如，计算机科学中的“四大件”（数据结构、操作系统、计算机网络、数据库）是构建技术知识体系的基石。没有这些基础，我们很容易陷入“调包侠”的困境，只能依赖现成的工具而无法深入理解其背后的原理。</li>
+<li><strong>避免成为“廉价劳动力”</strong>：如果不构建完整的知识体系，我们可能会沦为“会 Google 的 Ctrl+C/V 工程师”，只能解决表面问题，而无法应对复杂的挑战。这种状态下的知识工作者往往具有高度的可替代性，缺乏核心竞争力。</li>
+<li><strong>长期认知复利</strong>：知识体系的构建是一个长期的过程，但它能够带来持续的认知复利。通过不断积累和整合知识，我们能够在未来的工作和学习中更加高效地解决问题，甚至能够预见问题并提前做好准备。</li>
+</ul>
+</li>
+</ul>
+<h4 id="pkm_1">PKM 的核心原则：动态平衡与递归整合</h4>
+<p>PKM 的核心在于在解决问题与构建知识体系之间找到动态平衡，并通过递归整合的方式将两者有机结合。以下是 PKM 的几个核心原则：</p>
+<ul>
+<li><strong>问题驱动的知识积累</strong>：<ul>
+<li><strong>从问题出发</strong>：每次遇到新问题时，首先尝试从已有的知识体系中寻找解决方案。如果现有的知识不足以解决问题，则通过学习和研究来扩展知识边界。</li>
+<li><strong>记录与反思</strong>：在解决问题的过程中，记录下关键的思考步骤、解决方案以及遇到的挑战。通过定期的反思和总结，将这些零散的知识点逐步整合到已有的知识体系中。</li>
+</ul>
+</li>
+<li><strong>递归整合与知识重构</strong>：<ul>
+<li><strong>递归至熟悉领域</strong>：将新学到的知识与已有的知识进行递归整合，找到它们之间的联系。例如，学习一个新的算法时，可以将其与已有的数据结构知识进行关联，理解其背后的原理。</li>
+<li><strong>知识重构</strong>：随着知识的不断积累，定期对知识体系进行重构。通过重新组织知识结构，删除过时的内容，强化重要的概念，确保知识体系的简洁性和有效性。</li>
+</ul>
+</li>
+<li><strong>工具与流程的支持</strong>：<ul>
+<li><strong>笔记工具的选择</strong>：选择适合个人需求的笔记工具（如 Obsidian、Notion 等），利用双链、标签、文件夹等功能，构建一个灵活的知识管理系统。</li>
+<li><strong>自动化与工作流优化</strong>：通过自动化工具（如 Git 同步、Templater 插件等）优化知识管理的工作流，减少重复劳动，提高知识积累和整合的效率。</li>
+</ul>
+</li>
+</ul>
+<h4 id="pkm_2">PKM 的实践：从碎片到体系</h4>
+<p>PKM 的实践过程可以看作是从碎片化知识到系统化知识的逐步演进。以下是 PKM 实践的几个关键步骤：</p>
+<ul>
+<li><strong>碎片化知识的收集</strong>：<ul>
+<li><strong>多渠道输入</strong>：通过阅读书籍、论文、博客，观看视频课程，参与讨论等多种方式获取碎片化知识。</li>
+<li><strong>即时记录</strong>：使用笔记工具快速记录下有价值的知识点、灵感或问题，确保不会遗漏重要的信息。</li>
+</ul>
+</li>
+<li><strong>知识的初步整理</strong>：<ul>
+<li><strong>分类与标签</strong>：将收集到的知识按照主题、项目或领域进行分类，并打上标签，方便后续的检索和整合。</li>
+<li><strong>初步连接</strong>：通过双链功能将相关的知识点进行连接，形成初步的知识网络。</li>
+</ul>
+</li>
+<li><strong>知识的深度整合</strong>：<ul>
+<li><strong>主题笔记的创建</strong>：针对某个主题或领域，创建专门的笔记，将相关的碎片化知识进行整合，形成系统化的理解。</li>
+<li><strong>知识图谱的构建</strong>：通过双链和标签，逐步构建个人知识图谱，可视化知识之间的联系，发现潜在的知识盲区。</li>
+</ul>
+</li>
+<li><strong>知识的应用与迭代</strong>：<ul>
+<li><strong>实践与验证</strong>：将整合后的知识应用到实际问题中，验证其有效性，并根据实践结果进行迭代和优化。</li>
+<li><strong>定期复盘</strong>：定期对知识体系进行复盘，删除过时的内容，强化重要的概念，确保知识体系的简洁性和实用性。</li>
+</ul>
+</li>
+</ul>
+<h4 id="pkm_3">PKM 的长期价值：从知识工作者到知识创造者</h4>
+<p>通过有效的 PKM 实践，我们不仅能够提高解决问题的效率，还能够逐步构建起一个强大的个人知识体系。这个体系不仅是我们应对复杂问题的武器库，更是我们进行知识创造的基础。</p>
+<ul>
+<li><strong>从知识消费者到知识创造者</strong>：<ul>
+<li><strong>知识消费者</strong>：仅仅依赖外部资源（如 Google、Stack Overflow）解决问题，缺乏对知识的深入理解和整合。</li>
+<li><strong>知识创造者</strong>：通过 PKM 构建起自己的知识体系，能够从更高的维度理解问题，并提出创新的解决方案。知识创造者不仅能够解决问题，还能够预见问题，并主动进行知识的探索和创新。</li>
+</ul>
+</li>
+<li><strong>提升个人竞争力</strong>：<ul>
+<li><strong>不可替代性</strong>：拥有完整知识体系的知识工作者具有更强的不可替代性。他们不仅能够解决表面问题，还能够深入理解问题的本质，提出系统性的解决方案。</li>
+<li><strong>认知复利</strong>：通过长期的 PKM 实践，知识工作者能够积累大量的认知复利，使他们在未来的工作和学习中更加高效和自信。</li>
+</ul>
+</li>
+</ul>
+<hr />
+<p><strong>最后扔一个 deepseek 给出 PKM 建立方案，个人感觉还是有一点启发性的。包括但不限于引用了 PARA 等经典方案。</strong></p>
+<h2 id="pkm_4">如何构建一个 PKM</h2>
+<p>个人知识管理（PKM）的本质，是在碎片化实践与系统化认知之间建立双向通道。这个过程如同量子隧穿效应——通过持续的知识重组，让经验碎片突破认知势垒，跃迁到更高能级的知识轨道。</p>
+<h4 id="_10">知识工程的二象性模型</h4>
+<ol>
+<li><strong>粒子态（问题驱动）</strong><ul>
+<li><strong>突击学习模式</strong>：面对具体问题时，启动「最小必要知识」快速检索<ul>
+<li>示例：开发登录功能时，直接研究 OAuth2.0 协议实现方案</li>
+</ul>
+</li>
+<li><strong>知识捕手工具链</strong>：<ul>
+<li>浏览器书签分组+Raindrop. io 实现临时知识暂存</li>
+<li>Readwise 配合 Hypothesis 完成高亮批注的自动归集</li>
+<li>Obsidian QuickAdd 插件实现「闪念笔记→文献笔记」的即时转化</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>波动态（体系建设）</strong><ul>
+<li><strong>渐进式知识炼金术</strong>：<ul>
+<li>每周用 MECE 原则对临时笔记进行原子化拆分</li>
+<li>通过双链构建概念间的「非对称关系」（如「卷积神经网络→计算机视觉」是强关联，反向链接则为弱关联）</li>
+</ul>
+</li>
+<li><strong>认知脚手架</strong>：<ul>
+<li>使用 Excalidraw 绘制学科知识地图，标注掌握程度缺口</li>
+<li>在 Logseq 中建立「学习看板」，用 Kanban 管理知识模块的开发进度</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="_11">知识演化的三重熔炉</h4>
+<ol>
+<li><strong>项目熔炉（实战淬炼）</strong><ul>
+<li>采用 PARA 方法构建项目知识库：<ul>
+<li><strong>Projects</strong>：将每个开发任务视为独立知识单元</li>
+<li><strong>Areas</strong>：维护「前端工程化」「机器学习部署」等长期关注领域</li>
+<li><strong>Resources</strong>：积累技术白皮书、论文合集等参考资料</li>
+<li><strong>Archives</strong>：定期归档过时方案（如 Webpack3→Vite 迁移文档）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>对话熔炉（认知碰撞）</strong><ul>
+<li>在飞书知识库中建立「认知冲突区」：<ul>
+<li>技术方案评审时强制要求提交对比分析矩阵</li>
+<li>用多维表格记录不同架构选择的决策树（如微服务 vs 单体应用的 12 个评估维度）</li>
+</ul>
+</li>
+<li>每周组织「认知红队演练」：<ul>
+<li>随机指定成员挑战现有技术方案的底层假设</li>
+<li>使用 Miro 白板进行实时架构图攻击推演</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>元认知熔炉（系统升级）</strong><ul>
+<li>构建「反知识」监测体系：<ul>
+<li>在 Obsidian 中设置「过时警告」标签，标记可能失效的技术方案</li>
+<li>用 Dataview 自动生成「知识新鲜度」看板（根据最后更新时间排序）</li>
+</ul>
+</li>
+<li>实施「认知版本控制」：<ul>
+<li>使用 Git Tag 标记知识库的重大演进节点（如「Vue2→Vue3 迁移经验总结 v2.1」）</li>
+<li>通过分支管理进行认知实验（feature/blockchain-research 实验性探索）</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="_12">避免知识管理中的热力学陷阱</h4>
+<ol>
+<li>
+<p><strong>熵增定律防御策略</strong></p>
+<ul>
+<li><strong>知识压缩算法</strong>：<ul>
+<li>每季度执行「概念蒸馏」，将 10 篇相关论文提炼为 1 张本质洞察脑图</li>
+<li>用费曼技巧重构复杂知识，强制输出 500 字通俗解释</li>
+</ul>
+</li>
+<li><strong>负熵输入机制</strong>：<ul>
+<li>在 Readwise 设置「反常识过滤器」，优先推送挑战现有认知的文章</li>
+<li>订阅 arXiv 特定分类，保持对前沿研究的触觉敏锐度</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>工具理性批判</strong></p>
+<ul>
+<li>建立工具评估矩阵：</li>
+</ul>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>评估维度</th>
+<th>权重</th>
+<th>Obsidian</th>
+<th>Notion</th>
+<th>飞书</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>认知流畅度</td>
+<td>30%</td>
+<td>9</td>
+<td>7</td>
+<td>8</td>
+</tr>
+<tr>
+<td>知识可迁移性</td>
+<td>25%</td>
+<td>10</td>
+<td>6</td>
+<td>5</td>
+</tr>
+<tr>
+<td>协作效能</td>
+<td>20%</td>
+<td>6</td>
+<td>9</td>
+<td>10</td>
+</tr>
+<tr>
+<td>系统扩展性</td>
+<td>15%</td>
+<td>10</td>
+<td>8</td>
+<td>6</td>
+</tr>
+<tr>
+<td>心智负荷</td>
+<td>10%</td>
+<td>7</td>
+<td>5</td>
+<td>8</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>每半年进行「工具断舍离」，移除使用频率低于每周 1 次的插件/功能</li>
+</ul>
+<h4 id="_13">认知复利增长模型</h4>
+<p>真正的知识管理应该产生指数级收益，其价值符合「知识资本=初始认知×（1+重构效率）^时间」的复利公式。当你的知识网络节点数突破「创新临界点」（通常约 500 个高质量概念节点），将开始涌现意想不到的跨领域洞见——这可能是工程师突然理解蒙德里安画作中的网格美学，也可能是设计师在神经网络架构中发现分形之美。</p>
+<p>最终，PKM 不应成为束缚思维的精致牢笼，而应进化为「可生长的认知操作系统」。就像 Lisp 语言发明者 John McCarthy 所说："我们不是在记录知识，而是在培育会思考的笔记。"当你的知识库开始反哺你的创造力时，就是认知飞轮突破静摩擦力的时刻。</p>
+
+                
+
+  
+
+
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+    
+      <div class="md-copyright__highlight">
+        Copyright © 2025 [mathcourse-share]
+      </div>
+    
+    
+      Powered by
+      <a href="https://www.mkdocs.org/" target="_blank" rel="noopener">
+        MkDocs
+      </a>
+      with theme
+      <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+        Material
+      </a>
+      modified by
+      <a href="https://github.com/mathcourse-share.github.io" target="_blank" rel="noopener">
+        KeRan
+      </a>
+    
+</div>
+
+    
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+
+
+<h4>Cookie consent</h4>
+<p>We use cookies to recognize your repeated visits and preferences, as well as to measure the effectiveness of our documentation and whether users find what they're searching for. With your consent, you're helping us to make our documentation better. extra:</p>
+<input class="md-toggle" type="checkbox" id="__settings" >
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+    
+      
+    
+    
+      
+        
+  
+  
+    
+    
+  
+  <li class="task-list-item">
+    <label class="task-list-control">
+      <input type="checkbox" name="github" checked>
+      <span class="task-list-indicator"></span>
+      GitHub
+    </label>
+  </li>
+
+      
+    
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">同意</button>
+    
+    
+    
+  
+    
+    
+      <button type="reset" class="md-button md-button--primary">拒绝</button>
+    
+    
+  
+    
+    
+    
+      <label class="md-button" for="__settings">管理设定</label>
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout((function(){document.querySelector("[data-md-component=consent]").hidden=!1}),250);var form=document.forms.consent;for(var action of["submit","reset"])form.addEventListener(action,(function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map((function(e){return[e,!0]})))),location.hash="",location.reload()}))</script>
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["content.footnote.tooltips", "content.tabs.link", "content.tooltips", "navigation.instant"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.50899def.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../../javascripts/tablesort.js"></script>
+      
+        <script src="../../javascripts/consent.js"></script>
+      
+    
+  </body>
+</html>

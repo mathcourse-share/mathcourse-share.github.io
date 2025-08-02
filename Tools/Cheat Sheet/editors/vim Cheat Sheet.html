@@ -1,0 +1,5159 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://mathcourse-share.github.io/Tools/Cheat%20Sheet/editors/vim%20Cheat%20Sheet.html">
+      
+      
+        <link rel="prev" href="org%20Cheat%20Sheet.html">
+      
+      
+        <link rel="next" href="../languages/javascript%20Cheat%20Sheet.html">
+      
+      
+      <link rel="icon" href="../../../assets/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
+    
+    
+      
+        <title>vim Cheat Sheet - 数学分享站</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+  
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+  
+  <style>:root{--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20448%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.0.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20fill%3D%22currentColor%22%20d%3D%22M64%20480c-35.3%200-64-28.7-64-64V96c0-35.3%2028.7-64%2064-64h320c35.3%200%2064%2028.7%2064%2064v213.5c0%2017-6.7%2033.3-18.7%2045.3L322.7%20461.3c-12%2012-28.3%2018.7-45.3%2018.7zm325.5-176H296c-13.3%200-24%2010.7-24%2024v93.5z%22/%3E%3C/svg%3E');--md-admonition-icon--abstract:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20448%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.0.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20fill%3D%22currentColor%22%20d%3D%22M384%20512H96c-53%200-96-43-96-96V96C0%2043%2043%200%2096%200h304c26.5%200%2048%2021.5%2048%2048v288c0%2020.9-13.4%2038.7-32%2045.3V448c17.7%200%2032%2014.3%2032%2032s-14.3%2032-32%2032zM96%20384c-17.7%200-32%2014.3-32%2032s14.3%2032%2032%2032h256v-64zm32-232c0%2013.3%2010.7%2024%2024%2024h176c13.3%200%2024-10.7%2024-24s-10.7-24-24-24H152c-13.3%200-24%2010.7-24%2024m24%2072c-13.3%200-24%2010.7-24%2024s10.7%2024%2024%2024h176c13.3%200%2024-10.7%2024-24s-10.7-24-24-24z%22/%3E%3C/svg%3E');--md-admonition-icon--info:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.0.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20fill%3D%22currentColor%22%20d%3D%22M256%20512a256%20256%200%201%200%200-512%20256%20256%200%201%200%200%20512m-32-352a32%2032%200%201%201%2064%200%2032%2032%200%201%201-64%200m-8%2064h48c13.3%200%2024%2010.7%2024%2024v88h8c13.3%200%2024%2010.7%2024%2024s-10.7%2024-24%2024h-80c-13.3%200-24-10.7-24-24s10.7-24%2024-24h24v-64h-24c-13.3%200-24-10.7-24-24s10.7-24%2024-24%22/%3E%3C/svg%3E');--md-admonition-icon--tip:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.0.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20fill%3D%22currentColor%22%20d%3D%22M461.2%2018.9C472.7%2024%20480%2035.4%20480%2048v416c0%2012.6-7.3%2024-18.8%2029.1s-24.8%203.2-34.3-5.1l-46.6-40.7c-43.6-38.1-98.7-60.3-156.4-63V480c0%2017.7-14.3%2032-32%2032h-32c-17.7%200-32-14.3-32-32v-96C57.3%20384%200%20326.7%200%20256s57.3-128%20128-128h84.5c61.8-.2%20121.4-22.7%20167.9-63.3L427%2024c9.4-8.3%2022.9-10.2%2034.3-5.1zM224%20320v.2c70.3%202.7%20137.8%2028.5%20192%2073.4V118.3c-54.2%2044.9-121.7%2070.7-192%2073.4z%22/%3E%3C/svg%3E');--md-admonition-icon--success:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20448%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.0.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20fill%3D%22currentColor%22%20d%3D%22M434.8%2070.1c14.3%2010.4%2017.5%2030.4%207.1%2044.7l-256%20352c-5.5%207.6-14%2012.3-23.4%2013.1s-18.5-2.7-25.1-9.3l-128-128c-12.5-12.5-12.5-32.8%200-45.3s32.8-12.5%2045.3%200l101.5%20101.5%20234-321.7c10.4-14.3%2030.4-17.5%2044.7-7.1z%22/%3E%3C/svg%3E');--md-admonition-icon--question:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.0.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20fill%3D%22currentColor%22%20d%3D%22M256%20512a256%20256%200%201%200%200-512%20256%20256%200%201%200%200%20512m0-336c-17.7%200-32%2014.3-32%2032%200%2013.3-10.7%2024-24%2024s-24-10.7-24-24c0-44.2%2035.8-80%2080-80s80%2035.8%2080%2080c0%2047.2-36%2067.2-56%2074.5v3.8c0%2013.3-10.7%2024-24%2024s-24-10.7-24-24v-8.1c0-20.5%2014.8-35.2%2030.1-40.2%206.4-2.1%2013.2-5.5%2018.2-10.3%204.3-4.2%207.7-10%207.7-19.6%200-17.7-14.3-32-32-32zm-32%20192a32%2032%200%201%201%2064%200%2032%2032%200%201%201-64%200%22/%3E%3C/svg%3E');--md-admonition-icon--warning:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.0.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20fill%3D%22currentColor%22%20d%3D%22M256%200c14.7%200%2028.2%208.1%2035.2%2021l216%20400c6.7%2012.4%206.4%2027.4-.8%2039.5S486.1%20480%20472%20480H40c-14.1%200-27.1-7.4-34.4-19.5s-7.5-27.1-.8-39.5l216-400c7-12.9%2020.5-21%2035.2-21m0%20168c-13.3%200-24%2010.7-24%2024v112c0%2013.3%2010.7%2024%2024%2024s24-10.7%2024-24V192c0-13.3-10.7-24-24-24m26.7%20216a26.7%2026.7%200%201%200-53.3%200%2026.7%2026.7%200%201%200%2053.3%200%22/%3E%3C/svg%3E');--md-admonition-icon--failure:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20576%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.0.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20fill%3D%22currentColor%22%20d%3D%22M480-16c6.9%200%2013%204.4%2015.2%2010.9l13.5%2040.4%2040.4%2013.5C555.6%2051%20560%2057.1%20560%2064s-4.4%2013-10.9%2015.2l-40.4%2013.5-13.5%2040.4c-2.2%206.5-8.3%2010.9-15.2%2010.9s-13-4.4-15.2-10.9l-13.5-40.4-40.4-13.5C404.4%2077%20400%2070.9%20400%2064s4.4-13%2010.9-15.2l40.4-13.5%2013.5-40.4C467-11.6%20473.1-16%20480-16M321.4%2097.4c12.5-12.5%2032.8-12.5%2045.3%200l80%2080c12.5%2012.5%2012.5%2032.8%200%2045.3l-10.9%2010.9c7.9%2022%2012.2%2045.7%2012.2%2070.5%200%20114.9-93.1%20208-208%20208S32%20418.9%2032%20304%20125.1%2096%20240%2096c24.7%200%2048.5%204.3%2070.5%2012.3zM144%20304c0-53%2043-96%2096-96%2013.3%200%2024-10.7%2024-24s-10.7-24-24-24c-79.5%200-144%2064.5-144%20144%200%2013.3%2010.7%2024%2024%2024s24-10.7%2024-24%22/%3E%3C/svg%3E');--md-admonition-icon--danger:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.0.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20fill%3D%22currentColor%22%20d%3D%22M416%20427.4c58.5-44%2096-111.6%2096-187.4C512%20107.5%20397.4%200%20256%200S0%20107.5%200%20240c0%2075.8%2037.5%20143.4%2096%20187.4V464c0%2026.5%2021.5%2048%2048%2048h32v-40c0-13.3%2010.7-24%2024-24s24%2010.7%2024%2024v40h64v-40c0-13.3%2010.7-24%2024-24s24%2010.7%2024%2024v40h32c26.5%200%2048-21.5%2048-48zM96%20256a64%2064%200%201%201%20128%200%2064%2064%200%201%201-128%200m256-64a64%2064%200%201%201%200%20128%2064%2064%200%201%201%200-128%22/%3E%3C/svg%3E');--md-admonition-icon--bug:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20640%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.0.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20fill%3D%22currentColor%22%20d%3D%22M352%200c0-17.7-14.3-32-32-32s-32%2014.3-32%2032v64h-96c-53%200-96%2043-96%2096v224c0%2053%2043%2096%2096%2096h256c53%200%2096-43%2096-96V160c0-53-43-96-96-96h-96zM160%20368c0-13.3%2010.7-24%2024-24h32c13.3%200%2024%2010.7%2024%2024s-10.7%2024-24%2024h-32c-13.3%200-24-10.7-24-24m120%200c0-13.3%2010.7-24%2024-24h32c13.3%200%2024%2010.7%2024%2024s-10.7%2024-24%2024h-32c-13.3%200-24-10.7-24-24m120%200c0-13.3%2010.7-24%2024-24h32c13.3%200%2024%2010.7%2024%2024s-10.7%2024-24%2024h-32c-13.3%200-24-10.7-24-24M224%20176a48%2048%200%201%201%200%2096%2048%2048%200%201%201%200-96m144%2048a48%2048%200%201%201%2096%200%2048%2048%200%201%201-96%200m-304%200c0-17.7-14.3-32-32-32S0%20206.3%200%20224v96c0%2017.7%2014.3%2032%2032%2032s32-14.3%2032-32zm544-32c-17.7%200-32%2014.3-32%2032v96c0%2017.7%2014.3%2032%2032%2032s32-14.3%2032-32v-96c0-17.7-14.3-32-32-32%22/%3E%3C/svg%3E');--md-admonition-icon--example:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20448%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.0.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20fill%3D%22currentColor%22%20d%3D%22M288%200H128c-17.7%200-32%2014.3-32%2032s14.3%2032%2032%2032v151.5L7.5%20426.3C2.6%20435%200%20444.7%200%20454.7%200%20486.4%2025.6%20512%2057.3%20512h333.4c31.6%200%2057.3-25.6%2057.3-57.3%200-10-2.6-19.8-7.5-28.4L320%20215.5V64c17.7%200%2032-14.3%2032-32S337.7%200%20320%200zm-96%20215.5V64h64v151.5c0%2011.1%202.9%2022.1%208.4%2031.8L306%20320H142l41.6-72.7c5.5-9.7%208.4-20.6%208.4-31.8%22/%3E%3C/svg%3E');--md-admonition-icon--quote:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20448%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.0.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20fill%3D%22currentColor%22%20d%3D%22M0%20216C0%20149.7%2053.7%2096%20120%2096h8c17.7%200%2032%2014.3%2032%2032s-14.3%2032-32%2032h-8c-30.9%200-56%2025.1-56%2056v8h64c35.3%200%2064%2028.7%2064%2064v64c0%2035.3-28.7%2064-64%2064H64c-35.3%200-64-28.7-64-64zm256%200c0-66.3%2053.7-120%20120-120h8c17.7%200%2032%2014.3%2032%2032s-14.3%2032-32%2032h-8c-30.9%200-56%2025.1-56%2056v8h64c35.3%200%2064%2028.7%2064%2064v64c0%2035.3-28.7%2064-64%2064h-64c-35.3%200-64-28.7-64-64z%22/%3E%3C/svg%3E');}</style>
+
+
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M22%2012a10%2010%200%200%201-10%2010A10%2010%200%200%201%202%2012%2010%2010%200%200%201%2012%202a10%2010%200%200%201%2010%2010M6%2013h8l-3.5%203.5%201.42%201.42L17.84%2012l-5.92-5.92L10.5%207.5%2014%2011H6z%22/%3E%3C/svg%3E');}</style>
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Noto Sans SC";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#vim-cheat-sheet" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="数学分享站" class="md-header__button md-logo" aria-label="数学分享站" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            数学分享站
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              vim Cheat Sheet
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="启动暗影模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="启动暗影模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="开启日光模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="开启日光模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/mathcourse-share/mathcourse-share.github.io" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    courseshare
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="数学分享站" class="md-nav__button md-logo" aria-label="数学分享站" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    数学分享站
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/mathcourse-share/mathcourse-share.github.io" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    courseshare
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Home
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Index
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    course
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            course
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../how-to-learn%26solve-question.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    提问的智慧
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../course.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    [Protected] 暑假课程和相关作业以及错题
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Blogs
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Blogs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Blogs/index.html" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M224 24c0-13.3 10.7-24 24-24 145.8 0 264 118.2 264 264 0 13.3-10.7 24-24 24s-24-10.7-24-24c0-119.3-96.7-216-216-216-13.3 0-24-10.7-24-24M80 96c26.5 0 48 21.5 48 48v224c0 26.5 21.5 48 48 48s48-21.5 48-48-21.5-48-48-48c-8.8 0-16-7.2-16-16v-64c0-8.8 7.2-16 16-16 79.5 0 144 64.5 144 144s-64.5 144-144 144S32 447.5 32 368V144c0-26.5 21.5-48 48-48m168 0c92.8 0 168 75.2 168 168 0 13.3-10.7 24-24 24s-24-10.7-24-24c0-66.3-53.7-120-120-120-13.3 0-24-10.7-24-24s10.7-24 24-24"/></svg>
+  
+  <span class="md-ellipsis">
+    index
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Blogs/archives.html" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 3h18v4H3zm1 5h16v13H4zm5.5 3a.5.5 0 0 0-.5.5V13h6v-1.5a.5.5 0 0 0-.5-.5z"/></svg>
+  
+  <span class="md-ellipsis">
+    Archives
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Posts
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Posts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Blogs/posts/24-12-29.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    工作规律
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Blogs/posts/24-12-30.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    信息
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Blogs/posts/25-01-20.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    近期的一些想法
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Blogs/posts/FreeSplatter%20%E4%BB%A3%E7%A0%81%E8%A7%A3%E8%AF%BB.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FreeSplatter 代码解读
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Blogs/posts/Gaussian_Splatting_Code.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gaussian_Splatting_Code
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Blogs/posts/Gaussian_Splatting_%E5%A4%8D%E7%8E%B0.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gaussian Splatting 复现
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Blogs/posts/OCRN.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Beyond Object Recognition: A New Benchmark towards Object Concept Learning
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Blogs/posts/ULIP-2.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ULIP-2: Towards Scalable Multimodal Pre-training for 3D Understanding
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Blogs/posts/%E7%94%A8AI%E5%90%8E%E7%9A%84%E9%97%AE%E9%A2%98.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    一些 AI 与个人学习的思考
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Blogs/posts/notes_software.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    笔记软件选择
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Summaries
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Summaries
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Summaries/index.html" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 1h2v2h8V1h2v2h1a2 2 0 0 1 2 2v14c0 1.11-.89 2-2 2H5a2 2 0 0 1-2-2V5c0-1.11.89-2 2-2h1zM5 8v11h14V8zm2 2h10v2H7z"/></svg>
+  
+  <span class="md-ellipsis">
+    Summaries
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Weekly
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Weekly
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2_1" id="__nav_4_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    2024
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            2024
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Summaries/2024/weekly/2024-W44-10.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    None
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Summaries/2024/weekly/2024-W45-11.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    None
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Summaries/2024/weekly/2024-W46-11.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    None
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Summaries/2024/weekly/2024-W47-11.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    None
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Summaries/2024/weekly/2024-W48-11.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    None
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Summaries/2024/weekly/2024-W49-12.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    None
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Summaries/2024/weekly/2024-W50-12.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    None
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Summaries/2024/weekly/2024-W51-12.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2024-W51-12
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Summaries/2024/weekly/2024-W52-12.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2024-W52-12
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2_2" id="__nav_4_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    2025
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            2025
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Summaries/2025/weekly/2025-W01-12.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2025-W01-12
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Summaries/2025/weekly/2025-W02-01.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2025-W02-01
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Summaries/2025/weekly/2025-W03-01.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2025-W03-01
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Summaries/2025/weekly/2025-W04-01.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2025-W04-01
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Summaries/2025/weekly/2025-W05-01.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2025-W05-01
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Semesters
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Semesters
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Summaries/Semesters/202409-10.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    None
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Summaries/Semesters/2024_1_1.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    None
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Summaries/Semesters/2024summer_vacation.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2024年高三-大一暑假总结
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Computer Basic
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Computer Basic
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CS_Basic/index.html" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 22a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2h-6v7L9.5 7.5 7 9V2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2z"/></svg>
+  
+  <span class="md-ellipsis">
+    Computer Science Basic
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CS_Basic/15-213/CSAPP.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CSAPP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    C++
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            C++
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CS_Basic/C%2B%2B/Accelerated%20C%2B%2B.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Accelerated C++
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CS_Basic/C%2B%2B/C%2B%2B%20Basic.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    C++
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    CS61
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            CS61
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CS_Basic/CS61A/CS61A.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CS61A
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CS_Basic/CS61A/Composing_Programs.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    COMPOSING PROGRAMS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CS_Basic/CS61C/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E7%A1%AC%E4%BB%B6%E8%BD%AF%E4%BB%B6%E6%8E%A5%E5%8F%A3.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    计算机组成与设计硬件软件接口
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_5" id="__nav_5_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Network
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_5">
+            <span class="md-nav__icon md-icon"></span>
+            Network
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CS_Basic/Network/Security.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Security
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    AI
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            AI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AI/index.html" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 22a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2h-6v7L9.5 7.5 7 9V2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2z"/></svg>
+  
+  <span class="md-ellipsis">
+    Artificial Intelligence
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Basic
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            Basic
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AI/Dive_into_Deep_Learning.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dive into Deep Learning
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AI/SLAM14.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    视觉SLAM十四讲
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AI/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    统计学习方法
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    CS231n
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            CS231n
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AI/CS231n/CS231n_notes.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Computer Vision
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AI/CS231n/Image%20Classification-Data-driven%20Approach%2C%20k-Nearest%20Neighbor%2C%20train_val_test%20splits.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Image Classification-Data-driven Approach, k-Nearest Neighbor, train_val_test splits
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AI/CS231n/Linear%20classification-Support%20Vector%20Machine%2C%20Softmax.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Linear classification-Support Vector Machine, Softmax
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AI/CS231n/Numpy.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Numpy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    EECS 498-007
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            EECS 498-007
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AI/EECS%20498-007/KNN.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    KNN
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AI/EECS%20498-007/Pytorch.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    pytorch 的基本使用
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AI/EECS%20498-007/linear_classifer.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Linear classifer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_5" id="__nav_6_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    FFB6D
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_5">
+            <span class="md-nav__icon md-icon"></span>
+            FFB6D
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AI/FFB6D/FFB6D_Conda.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FFB6D环境配置指南：原生系统安装
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AI/FFB6D/FFB6D_Docker.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Docker从入门到实践：以FFB6D环境配置为例
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Robot
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Robot
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Robot/index.html" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 22a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2h-6v7L9.5 7.5 7 9V2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2z"/></svg>
+  
+  <span class="md-ellipsis">
+    Robot
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Robot/calibration.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Calibration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Robot/kalman.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    卡尔曼滤波
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Robot/pnp.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    pnp
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tools
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Tools
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16h-2v-1H8v1H6v-1H2v5h20v-5h-4zm2-8h-3V6c0-1.1-.9-2-2-2H9c-1.1 0-2 .9-2 2v2H4c-1.1 0-2 .9-2 2v4h4v-2h2v2h8v-2h2v2h4v-4c0-1.1-.9-2-2-2m-5 0H9V6h6z"/></svg>
+  
+  <span class="md-ellipsis">
+    Toolbox
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_8_2" id="__nav_8_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Cheat Sheet
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_8_2">
+            <span class="md-nav__icon md-icon"></span>
+            Cheat Sheet
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cheat Sheet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_2_2" id="__nav_8_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    tools
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_8_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            tools
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tools/adb%20Cheat%20Sheet.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    adb Cheat Sheet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tools/bash%20Cheat%20Sheet.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    bash Cheat Sheet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tools/ffmpeg%20Cheat%20Sheet.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ffmpeg Cheat Sheet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tools/gdb%20Cheat%20Sheet.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    gdb Cheat Sheet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tools/git%20Cheat%20Sheet.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    git
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tools/ip%20Cheat%20Sheet.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ip Cheat Sheet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tools/tmux%20Cheat%20Sheet.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    tmux Cheat Sheet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_2_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_8_2_3" id="__nav_8_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    editors
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_8_2_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_8_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            editors
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="emacs%20Cheat%20Sheet.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    emacs Cheat Sheet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="nano%20Cheat%20Sheet.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    nano Cheat Sheet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="org%20Cheat%20Sheet.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    org Cheat Sheet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    vim Cheat Sheet
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="vim%20Cheat%20Sheet.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    vim Cheat Sheet
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      光标移动
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      插入模式：进入退出
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#insert-mode-i-i-a-a-o-o" class="md-nav__link">
+    <span class="md-ellipsis">
+      INSERT MODE - 由 i, I, a, A, o, O 等命令进入插入模式后
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      文本编辑
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      复制粘贴
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-c-d-v-y-ia" class="md-nav__link">
+    <span class="md-ellipsis">
+      文本对象 - c, d, v, y 等命令后接文本对象，一般为：&lt;范围 i/a&gt;&lt;类型&gt;
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      查找替换
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visual-mode-v-v-ctrl-v" class="md-nav__link">
+    <span class="md-ellipsis">
+      VISUAL MODE - 由 v, V, CTRL-V 进入的可视模式
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      位置跳转
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      文件操作
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      已打开文件操作
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      窗口操作
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      标签页
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      书签
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      常用设置
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      帮助信息
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      外部命令
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quickfix" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quickfix 窗口
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      拼写检查
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      代码折叠
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      宏录制
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      其他命令
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plugin-github-tpopevim-commentary-commentaryvim-comment-stuff-out" class="md-nav__link">
+    <span class="md-ellipsis">
+      Plugin - GitHub - tpope/vim-commentary: commentary.vim: comment stuff out
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plugin-github-junegunnvim-easy-align-a-vim-alignment-plugin" class="md-nav__link">
+    <span class="md-ellipsis">
+      Plugin - GitHub - junegunn/vim-easy-align: A Vim alignment plugin
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plugin-github-tpopevim-unimpaired-unimpairedvim-pairs-of-handy-bracket-mappings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Plugin - GitHub - tpope/vim-unimpaired: unimpaired.vim: Pairs of handy bracket mappings
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plugin-github-gavingvim-textobj-argument-text-object-like-motion-for-arguments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Plugin - GitHub - gaving/vim-textobj-argument: Text-object like motion for arguments
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      网络资源
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      TIPS
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_2_4" id="__nav_8_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    languages
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_8_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            languages
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../languages/javascript%20Cheat%20Sheet.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    javascript Cheat Sheet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../languages/python%20Cheat%20Sheet.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    python Cheat Sheet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../languages/vimscript%20Cheat%20Sheet.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    VimScript Cheat Sheet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_3" id="__nav_8_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    AI
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_3">
+            <span class="md-nav__icon md-icon"></span>
+            AI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AI/prompt.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    prompt
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AI/prompt_writing.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AI 使用
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_4" id="__nav_8_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Blog
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_4">
+            <span class="md-nav__icon md-icon"></span>
+            Blog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Blog/Mkdocs_Material.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    mkdocs material 超全配置
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_5" id="__nav_8_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Environment
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_5">
+            <span class="md-nav__icon md-icon"></span>
+            Environment
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Environment/Ubuntu_setup.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ubuntu 配置
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Environment/environment.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Environment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Environment/obsidian_setup.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    obsidian 配置
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_6" id="__nav_8_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Make
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_6">
+            <span class="md-nav__icon md-icon"></span>
+            Make
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Make/CMake.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CMake 相关
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Make/Makeflie.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Makeflie
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_7" id="__nav_8_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Others
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_7">
+            <span class="md-nav__icon md-icon"></span>
+            Others
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Others/Chezmoi.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    用 chezmoi 实现跨设备同步配置
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Others/SSH.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SSH配置指南
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Others/zotero_%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    zotero_使用指南
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_8" id="__nav_8_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Terminal
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_8">
+            <span class="md-nav__icon md-icon"></span>
+            Terminal
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminal/Tabby_Zsh.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tabby + Zsh 配置指南
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tags
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Tags
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Tags/index.html" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.5 7A1.5 1.5 0 0 1 4 5.5 1.5 1.5 0 0 1 5.5 4 1.5 1.5 0 0 1 7 5.5 1.5 1.5 0 0 1 5.5 7m15.91 4.58-9-9C12.05 2.22 11.55 2 11 2H4c-1.11 0-2 .89-2 2v7c0 .55.22 1.05.59 1.41l8.99 9c.37.36.87.59 1.42.59s1.05-.23 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.56-.23-1.06-.59-1.42"/></svg>
+  
+  <span class="md-ellipsis">
+    Tags
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      光标移动
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      插入模式：进入退出
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#insert-mode-i-i-a-a-o-o" class="md-nav__link">
+    <span class="md-ellipsis">
+      INSERT MODE - 由 i, I, a, A, o, O 等命令进入插入模式后
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      文本编辑
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      复制粘贴
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-c-d-v-y-ia" class="md-nav__link">
+    <span class="md-ellipsis">
+      文本对象 - c, d, v, y 等命令后接文本对象，一般为：&lt;范围 i/a&gt;&lt;类型&gt;
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      查找替换
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visual-mode-v-v-ctrl-v" class="md-nav__link">
+    <span class="md-ellipsis">
+      VISUAL MODE - 由 v, V, CTRL-V 进入的可视模式
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      位置跳转
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      文件操作
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      已打开文件操作
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      窗口操作
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      标签页
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      书签
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      常用设置
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      帮助信息
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      外部命令
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quickfix" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quickfix 窗口
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      拼写检查
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      代码折叠
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      宏录制
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      其他命令
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plugin-github-tpopevim-commentary-commentaryvim-comment-stuff-out" class="md-nav__link">
+    <span class="md-ellipsis">
+      Plugin - GitHub - tpope/vim-commentary: commentary.vim: comment stuff out
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plugin-github-junegunnvim-easy-align-a-vim-alignment-plugin" class="md-nav__link">
+    <span class="md-ellipsis">
+      Plugin - GitHub - junegunn/vim-easy-align: A Vim alignment plugin
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plugin-github-tpopevim-unimpaired-unimpairedvim-pairs-of-handy-bracket-mappings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Plugin - GitHub - tpope/vim-unimpaired: unimpaired.vim: Pairs of handy bracket mappings
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plugin-github-gavingvim-textobj-argument-text-object-like-motion-for-arguments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Plugin - GitHub - gaving/vim-textobj-argument: Text-object like motion for arguments
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      网络资源
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      TIPS
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+
+                  
+<a href="https://github.com/mathcourse-share/mathcourse-share.github.io/edit/master/docs/Tools/Cheat Sheet/editors/vim Cheat Sheet.md" title="edit.link.title" class="md-content__button md-icon">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
+</a>
+
+
+<h1 id="vim-cheat-sheet">vim Cheat Sheet</h1>
+<h2 id="_1">光标移动</h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>h                   光标左移，同 &lt;Left&gt; 键
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>j                   光标下移，同 &lt;Down&gt; 键
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>k                   光标上移，同 &lt;Up&gt; 键
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>l                   光标右移，同 &lt;Right&gt; 键
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>CTRL-F              下一页
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>CTRL-B              上一页
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>CTRL-U              上移半屏
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>CTRL-D              下移半屏
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>0                   跳到行首（是数字零，不是字母O），效用等同于 &lt;Home&gt; 键
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>^                   跳到从行首开始第一个非空白字符
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>$                   跳到行尾，效用等同于 &lt;End&gt; 键
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>gg                  跳到第一行，效用等同于 CTRL+&lt;Home&gt;
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>G                   跳到最后一行，效用等同于 CTRL+&lt;End&gt;
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>nG                  跳到第n行，比如 10G 是移动到第十行
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>:n                  跳到第n行，比如 :10&lt;回车&gt; 是移动到第十行
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>10%                 移动到文件 10% 处
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>15|                 移动到当前行的 15列
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>w                   跳到下一个单词开头 (word: 标点或空格分隔的单词)
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>W                   跳到下一个单词开头 (WORD: 空格分隔的单词)
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>e                   跳到下一个单词尾部 (word: 标点或空格分隔的单词)
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>E                   跳到下一个单词尾部 (WORD: 空格分隔的单词)
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>b                   上一个单词头 (word: 标点或空格分隔的单词)
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>B                   上一个单词头 (WORD: 空格分隔的单词)
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>ge                  上一个单词尾
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>)                   向前移动一个句子（句号分隔）
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>(                   向后移动一个句子（句号分隔）
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>}                   向前移动一个段落（空行分隔）
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>{                   向后移动一个段落（空行分隔）
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>&lt;enter&gt;             移动到下一行首个非空字符
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>+                   移动到下一行首个非空字符（同回车键）
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>-                   移动到上一行首个非空字符
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>H                   移动到屏幕上部
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>M                   移动到屏幕中部
+</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>L                   移动到屏幕下部
+</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>fx                  跳转到下一个为 x 的字符，2f/ 可以找到第二个斜杆
+</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>Fx                  跳转到上一个为 x 的字符
+</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>tx                  跳转到下一个为 x 的字符前
+</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>Tx                  跳转到上一个为 x 的字符前
+</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a>;                   跳到下一个 f/t 搜索的结果
+</span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a>,                   跳到上一个 f/t 搜索的结果
+</span><span id="__span-0-41"><a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a>&lt;S-Left&gt;            按住 SHIFT 按左键，向左移动一个单词
+</span><span id="__span-0-42"><a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a>&lt;S-Right&gt;           按住 SHIFT 按右键，向右移动一个单词
+</span><span id="__span-0-43"><a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a>&lt;S-Up&gt;              按住 SHIFT 按上键，向上翻页
+</span><span id="__span-0-44"><a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a>&lt;S-Down&gt;            按住 SHIFT 按下键，向下翻页
+</span><span id="__span-0-45"><a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a>gm                  移动到行中
+</span><span id="__span-0-46"><a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a>gj                  光标下移一行（忽略自动换行）
+</span><span id="__span-0-47"><a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a>gk                  光标上移一行（忽略自动换行）
+</span></code></pre></div>
+<h2 id="_2">插入模式：进入退出</h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>i                   在光标处进入插入模式
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>I                   在行首进入插入模式
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>a                   在光标后进入插入模式
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>A                   在行尾进入插入模式
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>o                   在下一行插入新行并进入插入模式
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>O                   在上一行插入新行并进入插入模式
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>gi                  进入到上一次插入模式的位置
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>&lt;ESC&gt;               退出插入模式
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>CTRL-[              退出插入模式（同 ESC 等价，但更顺手）
+</span></code></pre></div>
+<h2 id="insert-mode-i-i-a-a-o-o">INSERT MODE - 由 i, I, a, A, o, O 等命令进入插入模式后</h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>&lt;Up&gt;                光标向上移动
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>&lt;Down&gt;              光标向下移动
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>&lt;Left&gt;              光标向左移动
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>&lt;Right&gt;             光标向右移动
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>&lt;S-Left&gt;            按住 SHIFT 按左键，向左移动一个单词
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>&lt;S-Right&gt;           按住 SHIFT 按右键，向右移动一个单词
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>&lt;S-Up&gt;              按住 SHIFT 按上键，向上翻页
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>&lt;S-Down&gt;            按住 SHIFT 按下键，向下翻页
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>&lt;PageUp&gt;            上翻页
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>&lt;PageDown&gt;          下翻页
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>&lt;Delete&gt;            删除光标处字符
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>&lt;BS&gt;                Backspace 向后删除字符
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>&lt;Home&gt;              光标跳转行首
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>&lt;End&gt;               光标跳转行尾
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>CTRL-W              向前删除单词
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>CTRL-O              临时退出插入模式，执行单条命令又返回插入模式
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>CTRL-\ CTRL-O       临时退出插入模式（光标保持），执行单条命令又返回插入模式
+</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>CTRL-R 0            插入寄存器（内部 0号剪贴板）内容，CTRL-R 后可跟寄存器名
+</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>CTRL-R &quot;            插入匿名寄存器内容，相当于插入模式下 p粘贴
+</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>CTRL-R =            插入表达式计算结果，等号后面跟表达式
+</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>CTRL-R :            插入上一次命令行命令
+</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>CTRL-R /            插入上一次搜索的关键字
+</span><span id="__span-2-23"><a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>CTRL-F              自动缩进
+</span><span id="__span-2-24"><a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>CTRL-U              删除当前行所有字符
+</span><span id="__span-2-25"><a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>CTRL-V {char}       插入非数字的字面量
+</span><span id="__span-2-26"><a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>CTRL-V {number}     插入三个数字代表的 ascii/unicode 字符
+</span><span id="__span-2-27"><a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a>CTRL-V 065          插入 10进制 ascii 字符（两数字） 065 即 A字符
+</span><span id="__span-2-28"><a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a>CTRL-V x41          插入 16进制 ascii 字符（三数字） x41 即 A字符
+</span><span id="__span-2-29"><a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a>CTRL-V o101         插入  8进制 ascii 字符（三数字） o101 即 A字符
+</span><span id="__span-2-30"><a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a>CTRL-V u1234        插入 16进制 unicode 字符（四数字）
+</span><span id="__span-2-31"><a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a>CTRL-V U12345678    插入 16进制 unicode 字符（八数字）
+</span><span id="__span-2-32"><a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a>CTRL-K {ch1} {ch2}  插入 digraph（见 :h digraph），快速输入日文或符号等
+</span><span id="__span-2-33"><a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a>CTRL-D              文字向前缩进
+</span><span id="__span-2-34"><a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a>CTRL-T              文字向后缩进
+</span></code></pre></div>
+<h2 id="_3">文本编辑</h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>r                   替换当前字符
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>R                   进入替换模式，直至 ESC 离开
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>s                   替换字符（删除光标处字符，并进入插入模式，前可接数量）
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>S                   替换行（删除当前行，并进入插入模式，前可接数量）
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>cc                  改写当前行（删除当前行并进入插入模式），同 S
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>cw                  改写光标开始处的当前单词
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>ciw                 改写光标所处的单词
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>caw                 改写光标所处的单词，并且包括前后空格（如果有的话）
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>c0                  改写到行首
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>c^                  改写到行首（第一个非零字符）
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>c$                  改写到行末
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>C                   改写到行尾（同c$）
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>ci&quot;                 改写双引号中的内容
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>ci&#39;                 改写单引号中的内容
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>cib                 改写小括号中的内容
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>cab                 改写小括号中的内容（包含小括号本身）
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>ci)                 改写小括号中的内容
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>ci]                 改写中括号中内容
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>ciB                 改写大括号中内容
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>caB                 改写大括号中的内容（包含大括号本身）
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>ci}                 改写大括号中内容
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>cit                 改写 xml tag 中的内容
+</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>cis                 改写当前句子
+</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>c2w                 改写下两个单词
+</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>ct(                 改写到小括号前
+</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a>c/apple             改写到光标后的第一个apple前
+</span><span id="__span-3-27"><a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a>x                   删除当前字符，前面可以接数字，3x代表删除三个字符
+</span><span id="__span-3-28"><a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a>X                   向前删除字符
+</span><span id="__span-3-29"><a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a>dd                  删除当前行
+</span><span id="__span-3-30"><a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a>d0                  删除到行首
+</span><span id="__span-3-31"><a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a>d^                  删除到行首（第一个非零字符）
+</span><span id="__span-3-32"><a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a>d$                  删除到行末
+</span><span id="__span-3-33"><a id="__codelineno-3-33" name="__codelineno-3-33" href="#__codelineno-3-33"></a>D                   删除到行末（同 d$）
+</span><span id="__span-3-34"><a id="__codelineno-3-34" name="__codelineno-3-34" href="#__codelineno-3-34"></a>dw                  删除当前单词
+</span><span id="__span-3-35"><a id="__codelineno-3-35" name="__codelineno-3-35" href="#__codelineno-3-35"></a>diw                 删除光标所处的单词
+</span><span id="__span-3-36"><a id="__codelineno-3-36" name="__codelineno-3-36" href="#__codelineno-3-36"></a>daw                 删除光标所处的单词，并包含前后空格（如果有的话）
+</span><span id="__span-3-37"><a id="__codelineno-3-37" name="__codelineno-3-37" href="#__codelineno-3-37"></a>di&quot;                 删除双引号中的内容
+</span><span id="__span-3-38"><a id="__codelineno-3-38" name="__codelineno-3-38" href="#__codelineno-3-38"></a>di&#39;                 删除单引号中的内容
+</span><span id="__span-3-39"><a id="__codelineno-3-39" name="__codelineno-3-39" href="#__codelineno-3-39"></a>dib                 删除小括号中的内容
+</span><span id="__span-3-40"><a id="__codelineno-3-40" name="__codelineno-3-40" href="#__codelineno-3-40"></a>di)                 删除小括号中的内容
+</span><span id="__span-3-41"><a id="__codelineno-3-41" name="__codelineno-3-41" href="#__codelineno-3-41"></a>dab                 删除小括号内的内容（包含小括号本身）
+</span><span id="__span-3-42"><a id="__codelineno-3-42" name="__codelineno-3-42" href="#__codelineno-3-42"></a>di]                 删除中括号中内容
+</span><span id="__span-3-43"><a id="__codelineno-3-43" name="__codelineno-3-43" href="#__codelineno-3-43"></a>diB                 删除大括号中内容
+</span><span id="__span-3-44"><a id="__codelineno-3-44" name="__codelineno-3-44" href="#__codelineno-3-44"></a>di}                 删除大括号中内容
+</span><span id="__span-3-45"><a id="__codelineno-3-45" name="__codelineno-3-45" href="#__codelineno-3-45"></a>daB                 删除大括号内的内容（包含大括号本身）
+</span><span id="__span-3-46"><a id="__codelineno-3-46" name="__codelineno-3-46" href="#__codelineno-3-46"></a>dit                 删除 xml tag 中的内容
+</span><span id="__span-3-47"><a id="__codelineno-3-47" name="__codelineno-3-47" href="#__codelineno-3-47"></a>dis                 删除当前句子
+</span><span id="__span-3-48"><a id="__codelineno-3-48" name="__codelineno-3-48" href="#__codelineno-3-48"></a>dip                 删除当前段落(前后有空白行的称为一个段落)
+</span><span id="__span-3-49"><a id="__codelineno-3-49" name="__codelineno-3-49" href="#__codelineno-3-49"></a>dap                 删除当前段落(包括前后空白行)
+</span><span id="__span-3-50"><a id="__codelineno-3-50" name="__codelineno-3-50" href="#__codelineno-3-50"></a>d2w                 删除下两个单词
+</span><span id="__span-3-51"><a id="__codelineno-3-51" name="__codelineno-3-51" href="#__codelineno-3-51"></a>dt(                 删除到小括号前
+</span><span id="__span-3-52"><a id="__codelineno-3-52" name="__codelineno-3-52" href="#__codelineno-3-52"></a>d/apple             删除到光标后的第一个apple前
+</span><span id="__span-3-53"><a id="__codelineno-3-53" name="__codelineno-3-53" href="#__codelineno-3-53"></a>dgg                 删除到文件头部
+</span><span id="__span-3-54"><a id="__codelineno-3-54" name="__codelineno-3-54" href="#__codelineno-3-54"></a>dG                  删除到文件尾部
+</span><span id="__span-3-55"><a id="__codelineno-3-55" name="__codelineno-3-55" href="#__codelineno-3-55"></a>d}                  删除下一段
+</span><span id="__span-3-56"><a id="__codelineno-3-56" name="__codelineno-3-56" href="#__codelineno-3-56"></a>d{                  删除上一段
+</span><span id="__span-3-57"><a id="__codelineno-3-57" name="__codelineno-3-57" href="#__codelineno-3-57"></a>u                   撤销
+</span><span id="__span-3-58"><a id="__codelineno-3-58" name="__codelineno-3-58" href="#__codelineno-3-58"></a>U                   撤销整行操作
+</span><span id="__span-3-59"><a id="__codelineno-3-59" name="__codelineno-3-59" href="#__codelineno-3-59"></a>CTRL-R              撤销上一次 u 命令
+</span><span id="__span-3-60"><a id="__codelineno-3-60" name="__codelineno-3-60" href="#__codelineno-3-60"></a>J                   链接多行为一行
+</span><span id="__span-3-61"><a id="__codelineno-3-61" name="__codelineno-3-61" href="#__codelineno-3-61"></a>.                   重复上一次操作
+</span><span id="__span-3-62"><a id="__codelineno-3-62" name="__codelineno-3-62" href="#__codelineno-3-62"></a>~                   替换大小写
+</span><span id="__span-3-63"><a id="__codelineno-3-63" name="__codelineno-3-63" href="#__codelineno-3-63"></a>g~iw                替换当前单词的大小写
+</span><span id="__span-3-64"><a id="__codelineno-3-64" name="__codelineno-3-64" href="#__codelineno-3-64"></a>gUiw                将单词转成大写
+</span><span id="__span-3-65"><a id="__codelineno-3-65" name="__codelineno-3-65" href="#__codelineno-3-65"></a>guiw                将当前单词转成小写
+</span><span id="__span-3-66"><a id="__codelineno-3-66" name="__codelineno-3-66" href="#__codelineno-3-66"></a>guu                 全行转为小写
+</span><span id="__span-3-67"><a id="__codelineno-3-67" name="__codelineno-3-67" href="#__codelineno-3-67"></a>gUU                 全行转为大写
+</span><span id="__span-3-68"><a id="__codelineno-3-68" name="__codelineno-3-68" href="#__codelineno-3-68"></a>&lt;&lt;                  减少缩进
+</span><span id="__span-3-69"><a id="__codelineno-3-69" name="__codelineno-3-69" href="#__codelineno-3-69"></a>&gt;&gt;                  增加缩进
+</span><span id="__span-3-70"><a id="__codelineno-3-70" name="__codelineno-3-70" href="#__codelineno-3-70"></a>==                  自动缩进
+</span><span id="__span-3-71"><a id="__codelineno-3-71" name="__codelineno-3-71" href="#__codelineno-3-71"></a>CTRL-A              增加数字
+</span><span id="__span-3-72"><a id="__codelineno-3-72" name="__codelineno-3-72" href="#__codelineno-3-72"></a>CTRL-X              减少数字
+</span></code></pre></div>
+<h2 id="_4">复制粘贴</h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>p                   粘贴到光标后
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>P                   粘贴到光标前
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>v                   开始标记
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>y                   复制标记内容
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>V                   开始按行标记
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>CTRL-V              开始列标记
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>y$                  复制当前位置到本行结束的内容
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>yy                  复制当前行
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>Y                   复制当前行，同 yy
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>yiw                 复制当前单词
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>3yy                 复制光标下三行内容
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>v0                  选中当前位置到行首
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>v$                  选中当前位置到行末
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>viw                 选中当前单词
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>vib                 选中小括号内的东西
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>vi)                 选中小括号内的东西
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>vi]                 选中中括号内的东西
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>viB                 选中大括号内的东西
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>vi}                 选中大括号内的东西
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>vis                 选中句子中的东西
+</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>vip                 选中当前段落(前后有空白行的称为一个段落)
+</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>vap                 选中当前段落(包括前后空白行)
+</span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a>vab                 选中小括号内的东西（包含小括号本身）
+</span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>va)                 选中小括号内的东西（包含小括号本身）
+</span><span id="__span-4-25"><a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a>va]                 选中中括号内的东西（包含中括号本身）
+</span><span id="__span-4-26"><a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a>vaB                 选中大括号内的东西（包含大括号本身）
+</span><span id="__span-4-27"><a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a>va}                 选中大括号内的东西（包含大括号本身）
+</span><span id="__span-4-28"><a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a>gv                  重新选择上一次选中的文字
+</span><span id="__span-4-29"><a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a>:set paste          允许粘贴模式（避免粘贴时自动缩进影响格式）
+</span><span id="__span-4-30"><a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a>:set nopaste        禁止粘贴模式
+</span><span id="__span-4-31"><a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a>&quot;?yy                复制当前行到寄存器 ? ，问号代表 0-9 的寄存器名称
+</span><span id="__span-4-32"><a id="__codelineno-4-32" name="__codelineno-4-32" href="#__codelineno-4-32"></a>&quot;?d3j               删除光标下三行内容，并放到寄存器 ? ，问号代表 0-9 的寄存器名称
+</span><span id="__span-4-33"><a id="__codelineno-4-33" name="__codelineno-4-33" href="#__codelineno-4-33"></a>&quot;?p                 将寄存器 ? 的内容粘贴到光标后
+</span><span id="__span-4-34"><a id="__codelineno-4-34" name="__codelineno-4-34" href="#__codelineno-4-34"></a>&quot;?P                 将寄存器 ? 的内容粘贴到光标前
+</span><span id="__span-4-35"><a id="__codelineno-4-35" name="__codelineno-4-35" href="#__codelineno-4-35"></a>:registers          显示所有寄存器内容
+</span><span id="__span-4-36"><a id="__codelineno-4-36" name="__codelineno-4-36" href="#__codelineno-4-36"></a>:[range]y           复制范围，比如 :20,30y 是复制20到30行，:10y 是复制第十行
+</span><span id="__span-4-37"><a id="__codelineno-4-37" name="__codelineno-4-37" href="#__codelineno-4-37"></a>:[range]d           删除范围，比如 :20,30d 是删除20到30行，:10d 是删除第十行
+</span><span id="__span-4-38"><a id="__codelineno-4-38" name="__codelineno-4-38" href="#__codelineno-4-38"></a>ddp                 交换两行内容：先删除当前行复制到寄存器，并粘贴
+</span><span id="__span-4-39"><a id="__codelineno-4-39" name="__codelineno-4-39" href="#__codelineno-4-39"></a>&quot;_[command]         使用[command]删除内容，并且不进行复制（不会污染寄存器）
+</span><span id="__span-4-40"><a id="__codelineno-4-40" name="__codelineno-4-40" href="#__codelineno-4-40"></a>&quot;*[command]         使用[command]复制内容到系统剪贴板（需要vim版本有clipboard支持）
+</span></code></pre></div>
+<h2 id="-c-d-v-y-ia">文本对象 - c, d, v, y 等命令后接文本对象，一般为：&lt;范围 i/a&gt;&lt;类型&gt;</h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>$                   到行末
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>0                   到行首
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>^                   到行首非空字符
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>tx                  光标位置到字符 x 之前
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>fx                  光标位置到字符 x 之处
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>iw                  整个单词（不包括分隔符）
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>aw                  整个单词（包括分隔符）
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>iW                  整个 WORD（不包括分隔符）
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>aW                  整个 WORD（包括分隔符）
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>is                  整个句子（不包括分隔符）
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>as                  整个句子（包括分隔符）
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>ip                  整个段落（不包括前后空白行）
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>ap                  整个段落（包括前后空白行）
+</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>ib                  小括号内
+</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>ab                  小括号内（包含小括号本身）
+</span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>iB                  大括号内
+</span><span id="__span-5-17"><a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>aB                  大括号内（包含大括号本身）
+</span><span id="__span-5-18"><a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a>i)                  小括号内
+</span><span id="__span-5-19"><a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a>a)                  小括号内（包含小括号本身）
+</span><span id="__span-5-20"><a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a>i]                  中括号内
+</span><span id="__span-5-21"><a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a>a]                  中括号内（包含中括号本身）
+</span><span id="__span-5-22"><a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a>i}                  大括号内
+</span><span id="__span-5-23"><a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a>a}                  大括号内（包含大括号本身）
+</span><span id="__span-5-24"><a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a>i&#39;                  单引号内
+</span><span id="__span-5-25"><a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a>a&#39;                  单引号内（包含单引号本身）
+</span><span id="__span-5-26"><a id="__codelineno-5-26" name="__codelineno-5-26" href="#__codelineno-5-26"></a>i&quot;                  双引号内
+</span><span id="__span-5-27"><a id="__codelineno-5-27" name="__codelineno-5-27" href="#__codelineno-5-27"></a>a&quot;                  双引号内（包含双引号本身）
+</span><span id="__span-5-28"><a id="__codelineno-5-28" name="__codelineno-5-28" href="#__codelineno-5-28"></a>2i)                 往外两层小括号内
+</span><span id="__span-5-29"><a id="__codelineno-5-29" name="__codelineno-5-29" href="#__codelineno-5-29"></a>2a)                 往外两层小括号内（包含小括号本身）
+</span><span id="__span-5-30"><a id="__codelineno-5-30" name="__codelineno-5-30" href="#__codelineno-5-30"></a>2f)                 到第二个小括号处
+</span><span id="__span-5-31"><a id="__codelineno-5-31" name="__codelineno-5-31" href="#__codelineno-5-31"></a>2t)                 到第二个小括号前
+</span></code></pre></div>
+<h2 id="_5">查找替换</h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>/pattern            从光标处向文件尾搜索 pattern
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>?pattern            从光标处向文件头搜索 pattern
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>n                   向同一方向执行上一次搜索
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>N                   向相反方向执行上一次搜索
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>*                   向前搜索光标下的单词
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>#                   向后搜索光标下的单词
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>:s/p1/p2/g          将当前行中全替换p1为p2
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>:%s/p1/p2/g         将当前文件中全替换p1为p2
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>:%s/p1/p2/gc        将当前文件中全替换p1为p2，并且每处询问你是否替换
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>:10,20s/p1/p2/g     将第10到20行中所有p1替换为p2
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>:., ns/p1/p2/g      将当前行到n行中所有p1替换为p2
+</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>:., +10s/p1/p2/g    将当前行到相对当前行加10行的区间中所有p1替换为p2
+</span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>:., $s/p1/p2/g      将当前行到最后一行中所有p1替换为p2
+</span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>:0,.s/p1/p2/g       将第一行到当前行中所有p1替换为p2
+</span><span id="__span-6-15"><a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>:%s/1\\2\/3/123/g   将“1\2/3” 替换为 “123”（特殊字符使用反斜杠标注）
+</span><span id="__span-6-16"><a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>:%s/\r//g           删除 DOS 换行符 ^M
+</span></code></pre></div>
+<h2 id="visual-mode-v-v-ctrl-v">VISUAL MODE - 由 v, V, CTRL-V 进入的可视模式</h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>&gt;                   增加缩进
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>&lt;                   减少缩进
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>d                   删除高亮选中的文字
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>x                   删除高亮选中的文字
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>c                   改写文字，即删除高亮选中的文字并进入插入模式
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>s                   改写文字，即删除高亮选中的文字并进入插入模式
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>y                   拷贝文字
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>~                   转换大小写
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>o                   跳转到标记区的另外一端
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>O                   跳转到标记块的另外一端
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>u                   标记区转换为小写
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>U                   标记区转换为大写
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>g CTRL-G            显示所选择区域的统计信息
+</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>&lt;Esc&gt;               退出可视模式
+</span></code></pre></div>
+<h2 id="_6">位置跳转</h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>CTRL-O              跳转到上一个位置
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>CTRL-I              跳转到下一个位置
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>CTRL-^              跳转到 alternate file (当前窗口的上一个文件）
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>CTRL-]              跳转到当前光标文字下的超链接
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>CTRL-T              返回到跳转之前的位置
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>%                   跳转到 {} () [] 的匹配
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>gd                  跳转到局部定义（光标下的单词的定义）
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>gD                  跳转到全局定义（光标下的单词的定义）
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>gf                  打开名称为光标下文件名的文件
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>[[                  跳转到上一个顶层函数（比如C语言以大括号分隔）
+</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>]]                  跳转到下一个顶层函数（比如C语言以大括号分隔）
+</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>[m                  跳转到上一个成员函数
+</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>]m                  跳转到下一个成员函数
+</span><span id="__span-8-14"><a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>[{                  跳转到上一处未匹配的 {
+</span><span id="__span-8-15"><a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>]}                  跳转到下一处未匹配的 }
+</span><span id="__span-8-16"><a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>[(                  跳转到上一处未匹配的 (
+</span><span id="__span-8-17"><a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a>])                  跳转到下一处未匹配的 )
+</span><span id="__span-8-18"><a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a>[c                  上一个不同处（diff时）
+</span><span id="__span-8-19"><a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a>]c                  下一个不同处（diff时）
+</span><span id="__span-8-20"><a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a>[/                  跳转到 C注释开头
+</span><span id="__span-8-21"><a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a>]/                  跳转到 C注释结尾
+</span><span id="__span-8-22"><a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a>``                  回到上次跳转的位置
+</span><span id="__span-8-23"><a id="__codelineno-8-23" name="__codelineno-8-23" href="#__codelineno-8-23"></a>&#39;&#39;                  回到上次跳转的位置
+</span><span id="__span-8-24"><a id="__codelineno-8-24" name="__codelineno-8-24" href="#__codelineno-8-24"></a>`.                  回到上次编辑的位置
+</span><span id="__span-8-25"><a id="__codelineno-8-25" name="__codelineno-8-25" href="#__codelineno-8-25"></a>&#39;.                  回到上次编辑的位置
+</span></code></pre></div>
+<h2 id="_7">文件操作</h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>:w                  保存文件
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>:w &lt;filename&gt;       按名称保存文件
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>:e &lt;filename&gt;       打开文件并编辑
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>:saveas &lt;filename&gt;  另存为文件
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>:r &lt;filename&gt;       读取文件并将内容插入到光标后
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>:r !dir             将 dir 命令的输出捕获并插入到光标后
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>:close              关闭文件
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>:q                  退出
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>:q!                 强制退出
+</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>:wa                 保存所有文件
+</span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>:cd &lt;path&gt;          切换 Vim 当前路径
+</span><span id="__span-9-12"><a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>:pwd                显示 Vim 当前路径
+</span><span id="__span-9-13"><a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>:new                打开一个新的窗口编辑新文件
+</span><span id="__span-9-14"><a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a>:enew               在当前窗口创建新文件
+</span><span id="__span-9-15"><a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a>:vnew               在左右切分的新窗口中编辑新文件
+</span><span id="__span-9-16"><a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a>:tabnew             在新的标签页中编辑新文件
+</span></code></pre></div>
+<h2 id="_8">已打开文件操作</h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>:ls                 查案缓存列表
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>:bn                 切换到下一个缓存
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>:bp                 切换到上一个缓存
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>:bd                 删除缓存
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>:b 1                切换到1号缓存
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>:b abc              切换到文件名为 abc 开头的缓存
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>:badd &lt;filename&gt;    将文件添加到缓存列表
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>:set hidden         设置隐藏模式（未保存的缓存可以被切换走，或者关闭）
+</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>:set nohidden       关闭隐藏模式（未保存的缓存不能被切换走，或者关闭）
+</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>n CTRL-^            切换缓存，先输入数字的缓存编号，再按 CTRL + 6
+</span></code></pre></div>
+<h2 id="_9">窗口操作</h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>:sp &lt;filename&gt;      上下切分窗口并在新窗口打开文件 filename
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>:vs &lt;filename&gt;      左右切分窗口并在新窗口打开文件 filename
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>CTRL-W s            上下切分窗口
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>CTRL-W v            左右切分窗口
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>CTRL-W w            循环切换到下一个窗口
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>CTRL-W W            循环切换到上一个窗口
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>CTRL-W p            跳到上一个访问过的窗口
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>CTRL-W c            关闭当前窗口
+</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>CTRL-W o            关闭其他窗口
+</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>CTRL-W h            跳到左边的窗口
+</span><span id="__span-11-11"><a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>CTRL-W j            跳到下边的窗口
+</span><span id="__span-11-12"><a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>CTRL-W k            跳到上边的窗口
+</span><span id="__span-11-13"><a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>CTRL-W l            跳到右边的窗口
+</span><span id="__span-11-14"><a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a>CTRL-W +            增加当前窗口的行高，前面可以加数字
+</span><span id="__span-11-15"><a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a>CTRL-W -            减少当前窗口的行高，前面可以加数字
+</span><span id="__span-11-16"><a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a>CTRL-W &lt;            减少当前窗口的列宽，前面可以加数字
+</span><span id="__span-11-17"><a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a>CTRL-W &gt;            增加当前窗口的列宽，前面可以加数字
+</span><span id="__span-11-18"><a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a>CTRL-W =            让所有窗口宽高相同
+</span><span id="__span-11-19"><a id="__codelineno-11-19" name="__codelineno-11-19" href="#__codelineno-11-19"></a>CTRL-W H            将当前窗口移动到最左边
+</span><span id="__span-11-20"><a id="__codelineno-11-20" name="__codelineno-11-20" href="#__codelineno-11-20"></a>CTRL-W J            将当前窗口移动到最下边
+</span><span id="__span-11-21"><a id="__codelineno-11-21" name="__codelineno-11-21" href="#__codelineno-11-21"></a>CTRL-W K            将当前窗口移动到最上边
+</span><span id="__span-11-22"><a id="__codelineno-11-22" name="__codelineno-11-22" href="#__codelineno-11-22"></a>CTRL-W L            将当前窗口移动到最右边
+</span><span id="__span-11-23"><a id="__codelineno-11-23" name="__codelineno-11-23" href="#__codelineno-11-23"></a>CTRL-W x            交换窗口
+</span><span id="__span-11-24"><a id="__codelineno-11-24" name="__codelineno-11-24" href="#__codelineno-11-24"></a>CTRL-W f            在新窗口中打开名为光标下文件名的文件
+</span><span id="__span-11-25"><a id="__codelineno-11-25" name="__codelineno-11-25" href="#__codelineno-11-25"></a>CTRL-W gf           在新标签页中打开名为光标下文件名的文件
+</span><span id="__span-11-26"><a id="__codelineno-11-26" name="__codelineno-11-26" href="#__codelineno-11-26"></a>CTRL-W R            旋转窗口
+</span><span id="__span-11-27"><a id="__codelineno-11-27" name="__codelineno-11-27" href="#__codelineno-11-27"></a>CTRL-W T            将当前窗口移到新的标签页中
+</span><span id="__span-11-28"><a id="__codelineno-11-28" name="__codelineno-11-28" href="#__codelineno-11-28"></a>CTRL-W P            跳转到预览窗口
+</span><span id="__span-11-29"><a id="__codelineno-11-29" name="__codelineno-11-29" href="#__codelineno-11-29"></a>CTRL-W z            关闭预览窗口
+</span><span id="__span-11-30"><a id="__codelineno-11-30" name="__codelineno-11-30" href="#__codelineno-11-30"></a>CTRL-W _            纵向最大化当前窗口
+</span><span id="__span-11-31"><a id="__codelineno-11-31" name="__codelineno-11-31" href="#__codelineno-11-31"></a>CTRL-W |            横向最大化当前窗口
+</span></code></pre></div>
+<h2 id="_10">标签页</h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>:tabs               显示所有标签页
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>:tabe &lt;filename&gt;    在新标签页中打开文件 filename
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>:tabn               下一个标签页
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>:tabp               上一个标签页
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>:tabc               关闭当前标签页
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>:tabo               关闭其他标签页
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>:tabn n             切换到第n个标签页，比如 :tabn 3 切换到第三个标签页
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>:tabm n             标签移动
+</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>:tabfirst           切换到第一个标签页
+</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>:tablast            切换到最后一个标签页
+</span><span id="__span-12-11"><a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>:tab help           在标签页打开帮助
+</span><span id="__span-12-12"><a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a>:tab drop &lt;file&gt;    如果文件已被其他标签页和窗口打开则跳过去，否则新标签打开
+</span><span id="__span-12-13"><a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a>:tab split          在新的标签页中打开当前窗口里的文件
+</span><span id="__span-12-14"><a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a>:tab ball           将缓存中所有文件用标签页打开
+</span><span id="__span-12-15"><a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a>:set showtabline=?  设置为 0 就不显示标签页标签，1会按需显示，2会永久显示
+</span><span id="__span-12-16"><a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a>ngt                 切换到第n个标签页，比如 2gt 将会切换到第二个标签页
+</span><span id="__span-12-17"><a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a>gt                  下一个标签页
+</span><span id="__span-12-18"><a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a>gT                  上一个标签页
+</span></code></pre></div>
+<h2 id="_11">书签</h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>:marks              显示所有书签
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>ma                  保存当前位置到书签 a ，书签名小写字母为文件内，大写全局
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>&#39;a                  跳转到书签 a所在的行
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>`a                  跳转到书签 a所在位置
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>`.                  跳转到上一次编辑的行
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>&#39;A                  跳转到全文书签 A
+</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>[&#39;                  跳转到上一个书签
+</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>]&#39;                  跳转到下一个书签
+</span><span id="__span-13-9"><a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>&#39;&lt;                  跳到上次可视模式选择区域的开始
+</span><span id="__span-13-10"><a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a>&#39;&gt;                  跳到上次可视模式选择区域的结束
+</span><span id="__span-13-11"><a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a>:delm a             删除缓冲区标签a
+</span><span id="__span-13-12"><a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a>:delm A             删除文件标签A
+</span><span id="__span-13-13"><a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a>:delm!              删除所有缓冲区标签(小写字母), 不能删除文件标签和数字标签
+</span><span id="__span-13-14"><a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a>:delm A-Z           删除所有文件标签(大写字母)
+</span><span id="__span-13-15"><a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a>:delm 0-9           删除所有数字标签(.viminfo)
+</span><span id="__span-13-16"><a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a>:delm A-Z0-9        删除所有文件标签和数字标签
+</span></code></pre></div>
+<h2 id="_12">常用设置</h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>:set nocompatible   设置不兼容原始 vi 模式（必须设置在最开头）
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>:set bs=?           设置BS键模式，现代编辑器为 :set bs=eol,start,indent
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>:set sw=4           设置缩进宽度为 4
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>:set ts=4           设置制表符宽度为 4
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>:set noet           设置不展开 tab 成空格
+</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>:set et             设置展开 tab 成空格
+</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>:set winaltkeys=no  设置 GVim 下正常捕获 ALT 键
+</span><span id="__span-14-8"><a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>:set nowrap         关闭自动换行
+</span><span id="__span-14-9"><a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a>:set ttimeout       允许终端按键检测超时（终端下功能键为一串ESC开头的扫描码）
+</span><span id="__span-14-10"><a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a>:set ttm=100        设置终端按键检测超时为100毫秒
+</span><span id="__span-14-11"><a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a>:set term=?         设置终端类型，比如常见的 xterm
+</span><span id="__span-14-12"><a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a>:set ignorecase     设置搜索忽略大小写(可缩写为 :set ic)
+</span><span id="__span-14-13"><a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a>:set noignorecase   设置搜索不忽略大小写(可缩写为 :set noic)
+</span><span id="__span-14-14"><a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a>:set smartcase      智能大小写，默认忽略大小写，除非搜索内容里包含大写字母
+</span><span id="__span-14-15"><a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a>:set list           设置显示制表符和换行符
+</span><span id="__span-14-16"><a id="__codelineno-14-16" name="__codelineno-14-16" href="#__codelineno-14-16"></a>:set number         设置显示行号，禁止显示行号可以用 :set nonumber
+</span><span id="__span-14-17"><a id="__codelineno-14-17" name="__codelineno-14-17" href="#__codelineno-14-17"></a>:set relativenumber 设置显示相对行号（其他行与当前行的距离）
+</span><span id="__span-14-18"><a id="__codelineno-14-18" name="__codelineno-14-18" href="#__codelineno-14-18"></a>:set paste          进入粘贴模式（粘贴时禁用缩进等影响格式的东西）
+</span><span id="__span-14-19"><a id="__codelineno-14-19" name="__codelineno-14-19" href="#__codelineno-14-19"></a>:set nopaste        结束粘贴模式
+</span><span id="__span-14-20"><a id="__codelineno-14-20" name="__codelineno-14-20" href="#__codelineno-14-20"></a>:set spell          允许拼写检查
+</span><span id="__span-14-21"><a id="__codelineno-14-21" name="__codelineno-14-21" href="#__codelineno-14-21"></a>:set hlsearch       设置高亮查找
+</span><span id="__span-14-22"><a id="__codelineno-14-22" name="__codelineno-14-22" href="#__codelineno-14-22"></a>:set ruler          总是显示光标位置
+</span><span id="__span-14-23"><a id="__codelineno-14-23" name="__codelineno-14-23" href="#__codelineno-14-23"></a>:set incsearch      查找输入时动态增量显示查找结果
+</span><span id="__span-14-24"><a id="__codelineno-14-24" name="__codelineno-14-24" href="#__codelineno-14-24"></a>:set insertmode     Vim 始终处于插入模式下，使用 ctrl-o 临时执行命令
+</span><span id="__span-14-25"><a id="__codelineno-14-25" name="__codelineno-14-25" href="#__codelineno-14-25"></a>:set all            列出所有选项设置情况
+</span><span id="__span-14-26"><a id="__codelineno-14-26" name="__codelineno-14-26" href="#__codelineno-14-26"></a>:syntax on          允许语法高亮
+</span><span id="__span-14-27"><a id="__codelineno-14-27" name="__codelineno-14-27" href="#__codelineno-14-27"></a>:syntax off         禁止语法高亮
+</span></code></pre></div>
+<h2 id="_13">帮助信息</h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>:h tutor            入门文档
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>:h quickref         快速帮助
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>:h index            查询 Vim 所有键盘命令定义
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>:h summary          帮助你更好的使用内置帮助系统
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>:h CTRL-H           查询普通模式下 CTRL-H 是干什么的
+</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>:h i_CTRL-H         查询插入模式下 CTRL-H 是干什么的
+</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>:h i_&lt;Up&gt;           查询插入模式下方向键上是干什么的
+</span><span id="__span-15-8"><a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>:h pattern.txt      正则表达式帮助
+</span><span id="__span-15-9"><a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>:h eval             脚本编写帮助
+</span><span id="__span-15-10"><a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a>:h function-list    查看 VimScript 的函数列表 
+</span><span id="__span-15-11"><a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a>:h windows.txt      窗口使用帮助
+</span><span id="__span-15-12"><a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a>:h tabpage.txt      标签页使用帮助
+</span><span id="__span-15-13"><a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a>:h +timers          显示对 +timers 特性的帮助
+</span><span id="__span-15-14"><a id="__codelineno-15-14" name="__codelineno-15-14" href="#__codelineno-15-14"></a>:h :!               查看如何运行外部命令
+</span><span id="__span-15-15"><a id="__codelineno-15-15" name="__codelineno-15-15" href="#__codelineno-15-15"></a>:h tips             查看 Vim 内置的常用技巧文档
+</span><span id="__span-15-16"><a id="__codelineno-15-16" name="__codelineno-15-16" href="#__codelineno-15-16"></a>:h set-termcap      查看如何设置按键扫描码
+</span><span id="__span-15-17"><a id="__codelineno-15-17" name="__codelineno-15-17" href="#__codelineno-15-17"></a>:viusage            NORMAL 模式帮助
+</span><span id="__span-15-18"><a id="__codelineno-15-18" name="__codelineno-15-18" href="#__codelineno-15-18"></a>:exusage            EX 命令帮助
+</span><span id="__span-15-19"><a id="__codelineno-15-19" name="__codelineno-15-19" href="#__codelineno-15-19"></a>:version            显示当前 Vim 的版本号和特性
+</span></code></pre></div>
+<h2 id="_14">外部命令</h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>:!ls                运行外部命令 ls，并等待返回
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>:r !ls              将外部命令 ls 的输出捕获，并插入到光标后
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>:w !sudo tee %      sudo以后保存当前文件
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>:call system(&#39;ls&#39;)  调用 ls 命令，但是不显示返回内容
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>:!start notepad     Windows 下启动 notepad，最前面可以加 silent
+</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>:sil !start cmd     Windows 下当前目录打开 cmd
+</span><span id="__span-16-7"><a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>:%!prog             运行文字过滤程序，如整理 json格式 :%!python -m json.tool
+</span></code></pre></div>
+<h2 id="quickfix">Quickfix 窗口</h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>:copen              打开 quickfix 窗口（查看编译，grep等信息）
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>:copen 10           打开 quickfix 窗口，并且设置高度为 10
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>:cclose             关闭 quickfix 窗口
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>:cfirst             跳到 quickfix 中第一个错误信息
+</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>:clast              跳到 quickfix 中最后一条错误信息
+</span><span id="__span-17-6"><a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>:cc [nr]            查看错误 [nr]
+</span><span id="__span-17-7"><a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a>:cnext              跳到 quickfix 中下一个错误信息
+</span><span id="__span-17-8"><a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a>:cprev              跳到 quickfix 中上一个错误信息
+</span></code></pre></div>
+<h2 id="_15">拼写检查</h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>:set spell          打开拼写检查
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>:set nospell        关闭拼写检查
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>]s                  下一处错误拼写的单词
+</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>[s                  上一处错误拼写的单词
+</span><span id="__span-18-5"><a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>zg                  加入单词到拼写词表中
+</span><span id="__span-18-6"><a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a>zug                 撤销上一次加入的单词
+</span><span id="__span-18-7"><a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a>z=                  拼写建议
+</span></code></pre></div>
+<h2 id="_16">代码折叠</h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>za                  切换折叠
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>zA                  递归切换折叠
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>zc                  折叠光标下代码
+</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>zC                  折叠光标下所有代码
+</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>zd                  删除光标下折叠
+</span><span id="__span-19-6"><a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>zD                  递归删除所有折叠
+</span><span id="__span-19-7"><a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a>zE                  删除所有折叠
+</span><span id="__span-19-8"><a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a>zf                  创建代码折叠
+</span><span id="__span-19-9"><a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a>zF                  指定行数创建折叠
+</span><span id="__span-19-10"><a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a>zi                  切换折叠
+</span><span id="__span-19-11"><a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a>zm                  所有代码折叠一层
+</span><span id="__span-19-12"><a id="__codelineno-19-12" name="__codelineno-19-12" href="#__codelineno-19-12"></a>zr                  所有代码打开一层
+</span><span id="__span-19-13"><a id="__codelineno-19-13" name="__codelineno-19-13" href="#__codelineno-19-13"></a>zM                  折叠所有代码，设置 foldlevel=0，设置 foldenable
+</span><span id="__span-19-14"><a id="__codelineno-19-14" name="__codelineno-19-14" href="#__codelineno-19-14"></a>zR                  打开所有代码，设置 foldlevel 为最大值
+</span><span id="__span-19-15"><a id="__codelineno-19-15" name="__codelineno-19-15" href="#__codelineno-19-15"></a>zn                  折叠 none，重置 foldenable 并打开所有代码
+</span><span id="__span-19-16"><a id="__codelineno-19-16" name="__codelineno-19-16" href="#__codelineno-19-16"></a>zN                  折叠 normal，重置 foldenable 并恢复所有折叠
+</span><span id="__span-19-17"><a id="__codelineno-19-17" name="__codelineno-19-17" href="#__codelineno-19-17"></a>zo                  打开一层代码
+</span><span id="__span-19-18"><a id="__codelineno-19-18" name="__codelineno-19-18" href="#__codelineno-19-18"></a>zO                  打开光标下所有代码折叠
+</span></code></pre></div>
+<h2 id="_17">宏录制</h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>qa                  开始录制名字为 a 的宏
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>q                   结束录制宏
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>@a                  播放名字为 a 的宏
+</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>@@                  播放上一个宏
+</span><span id="__span-20-5"><a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a>@:                  重复上一个ex命令（即冒号命令）
+</span></code></pre></div>
+<h2 id="_18">其他命令</h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>CTRL-X CTRL-F       插入模式下文件路径补全
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>CTRL-X CTRL-O       插入下 Omnifunc 补全
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>CTRL-X CTRL-N       插入模式下关键字补全
+</span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>CTRL-X CTRL-E       插入模式下向上滚屏
+</span><span id="__span-21-5"><a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>CTRL-X CTRL-Y       插入模式下向下滚屏
+</span><span id="__span-21-6"><a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a>CTRL-E              向上滚屏
+</span><span id="__span-21-7"><a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a>CTRL-Y              向下滚屏
+</span><span id="__span-21-8"><a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a>CTRL-G              显示正在编辑的文件名，以及大小和位置信息
+</span><span id="__span-21-9"><a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a>g CTRL-G            显示文件的：大小，字符数，单词数和行数，可视模式下也可用
+</span><span id="__span-21-10"><a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a>zz                  调整光标所在行到屏幕中央
+</span><span id="__span-21-11"><a id="__codelineno-21-11" name="__codelineno-21-11" href="#__codelineno-21-11"></a>zt                  调整光标所在行到屏幕上部
+</span><span id="__span-21-12"><a id="__codelineno-21-12" name="__codelineno-21-12" href="#__codelineno-21-12"></a>zb                  调整光标所在行到屏幕下部
+</span><span id="__span-21-13"><a id="__codelineno-21-13" name="__codelineno-21-13" href="#__codelineno-21-13"></a>ga                  显示光标下字符的 ascii 码或者 unicode 编码
+</span><span id="__span-21-14"><a id="__codelineno-21-14" name="__codelineno-21-14" href="#__codelineno-21-14"></a>g8                  显示光标下字符的 utf-8 编码字节序
+</span><span id="__span-21-15"><a id="__codelineno-21-15" name="__codelineno-21-15" href="#__codelineno-21-15"></a>gi                  回到上次进入插入的地方，并切换到插入模式
+</span><span id="__span-21-16"><a id="__codelineno-21-16" name="__codelineno-21-16" href="#__codelineno-21-16"></a>K                   查询光标下单词的帮助
+</span><span id="__span-21-17"><a id="__codelineno-21-17" name="__codelineno-21-17" href="#__codelineno-21-17"></a>ZZ                  保存文件（如果有改动的话），并关闭窗口
+</span><span id="__span-21-18"><a id="__codelineno-21-18" name="__codelineno-21-18" href="#__codelineno-21-18"></a>ZQ                  不保存文件关闭窗口
+</span><span id="__span-21-19"><a id="__codelineno-21-19" name="__codelineno-21-19" href="#__codelineno-21-19"></a>CTRL-PgUp           上个标签页，GVim OK，部分终端软件需设置对应键盘码
+</span><span id="__span-21-20"><a id="__codelineno-21-20" name="__codelineno-21-20" href="#__codelineno-21-20"></a>CTRL-PgDown         下个标签页，GVim OK，部分终端软件需设置对应键盘码
+</span><span id="__span-21-21"><a id="__codelineno-21-21" name="__codelineno-21-21" href="#__codelineno-21-21"></a>CTRL-R CTRL-W       命令模式下插入光标下单词
+</span><span id="__span-21-22"><a id="__codelineno-21-22" name="__codelineno-21-22" href="#__codelineno-21-22"></a>CTRL-INSERT         复制到系统剪贴板（GVIM）
+</span><span id="__span-21-23"><a id="__codelineno-21-23" name="__codelineno-21-23" href="#__codelineno-21-23"></a>SHIFT-INSERT        粘贴系统剪贴板的内容（GVIM）
+</span><span id="__span-21-24"><a id="__codelineno-21-24" name="__codelineno-21-24" href="#__codelineno-21-24"></a>:set ff=unix        设置换行为 unix
+</span><span id="__span-21-25"><a id="__codelineno-21-25" name="__codelineno-21-25" href="#__codelineno-21-25"></a>:set ff=dos         设置换行为 dos
+</span><span id="__span-21-26"><a id="__codelineno-21-26" name="__codelineno-21-26" href="#__codelineno-21-26"></a>:set ff?            查看换行设置
+</span><span id="__span-21-27"><a id="__codelineno-21-27" name="__codelineno-21-27" href="#__codelineno-21-27"></a>:set nohl           清除搜索高亮
+</span><span id="__span-21-28"><a id="__codelineno-21-28" name="__codelineno-21-28" href="#__codelineno-21-28"></a>:set termcap        查看会从终端接收什么以及会发送给终端什么命令
+</span><span id="__span-21-29"><a id="__codelineno-21-29" name="__codelineno-21-29" href="#__codelineno-21-29"></a>:set guicursor=     解决 SecureCRT/PenguiNet 中 NeoVim 局部奇怪字符问题
+</span><span id="__span-21-30"><a id="__codelineno-21-30" name="__codelineno-21-30" href="#__codelineno-21-30"></a>:set t_RS= t_SH=    解决 SecureCRT/PenguiNet 中 Vim8.0 终端功能奇怪字符
+</span><span id="__span-21-31"><a id="__codelineno-21-31" name="__codelineno-21-31" href="#__codelineno-21-31"></a>:set fo+=a          开启文本段的实时自动格式化
+</span><span id="__span-21-32"><a id="__codelineno-21-32" name="__codelineno-21-32" href="#__codelineno-21-32"></a>:earlier 15m        回退到15分钟前的文件内容
+</span><span id="__span-21-33"><a id="__codelineno-21-33" name="__codelineno-21-33" href="#__codelineno-21-33"></a>:.!date             在当前窗口插入时间
+</span><span id="__span-21-34"><a id="__codelineno-21-34" name="__codelineno-21-34" href="#__codelineno-21-34"></a>:%!xxd              开始二进制编辑
+</span><span id="__span-21-35"><a id="__codelineno-21-35" name="__codelineno-21-35" href="#__codelineno-21-35"></a>:%!xxd -r           保存二进制编辑
+</span><span id="__span-21-36"><a id="__codelineno-21-36" name="__codelineno-21-36" href="#__codelineno-21-36"></a>:r !curl -sL {URL}  读取 url 内容添加到光标后
+</span><span id="__span-21-37"><a id="__codelineno-21-37" name="__codelineno-21-37" href="#__codelineno-21-37"></a>:g/^\s*$/d          删除空行
+</span><span id="__span-21-38"><a id="__codelineno-21-38" name="__codelineno-21-38" href="#__codelineno-21-38"></a>:g/green/d          删除所有包含 green 的行
+</span><span id="__span-21-39"><a id="__codelineno-21-39" name="__codelineno-21-39" href="#__codelineno-21-39"></a>:v/green/d          删除所有不包含 green 的行
+</span><span id="__span-21-40"><a id="__codelineno-21-40" name="__codelineno-21-40" href="#__codelineno-21-40"></a>:g/gladiolli/#      搜索单词打印结果，并在结果前加上行号
+</span><span id="__span-21-41"><a id="__codelineno-21-41" name="__codelineno-21-41" href="#__codelineno-21-41"></a>:g/ab.*cd.*efg/#    搜索包含 ab,cd 和 efg 的行，打印结果以及行号
+</span><span id="__span-21-42"><a id="__codelineno-21-42" name="__codelineno-21-42" href="#__codelineno-21-42"></a>:v/./,/./-j         压缩空行
+</span><span id="__span-21-43"><a id="__codelineno-21-43" name="__codelineno-21-43" href="#__codelineno-21-43"></a>:Man bash           在 Vim 中查看 man，先调用 :runtime! ftplugin/man.vim 激活
+</span><span id="__span-21-44"><a id="__codelineno-21-44" name="__codelineno-21-44" href="#__codelineno-21-44"></a>/fred\|joe          搜索 fred 或者 joe
+</span><span id="__span-21-45"><a id="__codelineno-21-45" name="__codelineno-21-45" href="#__codelineno-21-45"></a>/\&lt;\d\d\d\d\&gt;       精确搜索四个数字
+</span><span id="__span-21-46"><a id="__codelineno-21-46" name="__codelineno-21-46" href="#__codelineno-21-46"></a>/^\n\{3}            搜索连续三个空行
+</span></code></pre></div>
+<h2 id="plugin-github-tpopevim-commentary-commentaryvim-comment-stuff-out">Plugin - <a href="https://github.com/tpope/vim-commentary">GitHub - tpope/vim-commentary: commentary.vim: comment stuff out</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>gcc                 注释当前行
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>gc{motion}          注释 {motion} 所标注的区域，比如 gcap 注释整段
+</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>gci{                注释大括号内的内容
+</span><span id="__span-22-4"><a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a>gc                  在 Visual Mode 下面按 gc 注释选中区域
+</span><span id="__span-22-5"><a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a>:7,17Commentary     注释 7 到 17 行
+</span></code></pre></div>
+<h2 id="plugin-github-junegunnvim-easy-align-a-vim-alignment-plugin">Plugin - <a href="https://github.com/junegunn/vim-easy-align">GitHub - junegunn/vim-easy-align: <img alt="🌻" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f33b.svg" title=":sunflower:" /> A Vim alignment plugin</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>:EasyAlign =        以第一个匹配的=为中心对齐
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>:EasyAlign *=       匹配并且对齐所有=
+</span></code></pre></div>
+<h2 id="plugin-github-tpopevim-unimpaired-unimpairedvim-pairs-of-handy-bracket-mappings">Plugin - <a href="https://github.com/tpope/vim-unimpaired">GitHub - tpope/vim-unimpaired: unimpaired.vim: Pairs of handy bracket mappings</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>[space              向上插入空行
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>]space              向下插入空行
+</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>[e                  替换当前行和上一行
+</span><span id="__span-24-4"><a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a>]e                  替换当前行和下一行
+</span><span id="__span-24-5"><a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a>[x                  XML 编码
+</span><span id="__span-24-6"><a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a>]x                  XML 解码
+</span><span id="__span-24-7"><a id="__codelineno-24-7" name="__codelineno-24-7" href="#__codelineno-24-7"></a>[u                  URL 编码
+</span><span id="__span-24-8"><a id="__codelineno-24-8" name="__codelineno-24-8" href="#__codelineno-24-8"></a>]u                  URL 解码
+</span><span id="__span-24-9"><a id="__codelineno-24-9" name="__codelineno-24-9" href="#__codelineno-24-9"></a>[y                  C 字符串编码
+</span><span id="__span-24-10"><a id="__codelineno-24-10" name="__codelineno-24-10" href="#__codelineno-24-10"></a>]y                  C 字符串解码
+</span><span id="__span-24-11"><a id="__codelineno-24-11" name="__codelineno-24-11" href="#__codelineno-24-11"></a>[q                  上一个 quickfix 错误
+</span><span id="__span-24-12"><a id="__codelineno-24-12" name="__codelineno-24-12" href="#__codelineno-24-12"></a>]q                  下一个 quickfix 错误
+</span><span id="__span-24-13"><a id="__codelineno-24-13" name="__codelineno-24-13" href="#__codelineno-24-13"></a>[Q                  第一个 quickfix 错误
+</span><span id="__span-24-14"><a id="__codelineno-24-14" name="__codelineno-24-14" href="#__codelineno-24-14"></a>]Q                  最后一个 quickfix 错误
+</span><span id="__span-24-15"><a id="__codelineno-24-15" name="__codelineno-24-15" href="#__codelineno-24-15"></a>[f                  切换同目录里上一个文件
+</span><span id="__span-24-16"><a id="__codelineno-24-16" name="__codelineno-24-16" href="#__codelineno-24-16"></a>]f                  切换同目录里下一个文件
+</span><span id="__span-24-17"><a id="__codelineno-24-17" name="__codelineno-24-17" href="#__codelineno-24-17"></a>[os                 设置 :set spell
+</span><span id="__span-24-18"><a id="__codelineno-24-18" name="__codelineno-24-18" href="#__codelineno-24-18"></a>]os                 设置 :set nospell
+</span><span id="__span-24-19"><a id="__codelineno-24-19" name="__codelineno-24-19" href="#__codelineno-24-19"></a>=os                 设置 :set invspell
+</span><span id="__span-24-20"><a id="__codelineno-24-20" name="__codelineno-24-20" href="#__codelineno-24-20"></a>[on                 显示行号
+</span><span id="__span-24-21"><a id="__codelineno-24-21" name="__codelineno-24-21" href="#__codelineno-24-21"></a>]on                 关闭行号
+</span><span id="__span-24-22"><a id="__codelineno-24-22" name="__codelineno-24-22" href="#__codelineno-24-22"></a>[ol                 显示回车和制表符 :set list
+</span><span id="__span-24-23"><a id="__codelineno-24-23" name="__codelineno-24-23" href="#__codelineno-24-23"></a>]ol                 不显示回车和制表符 :set nolist
+</span><span id="__span-24-24"><a id="__codelineno-24-24" name="__codelineno-24-24" href="#__codelineno-24-24"></a>[b                  缓存切换到上一个文件，即 :bp
+</span><span id="__span-24-25"><a id="__codelineno-24-25" name="__codelineno-24-25" href="#__codelineno-24-25"></a>]b                  缓存切换到下一个文件，即 :bn
+</span><span id="__span-24-26"><a id="__codelineno-24-26" name="__codelineno-24-26" href="#__codelineno-24-26"></a>[B                  缓存切换到第一个文件，即 :bfirst
+</span><span id="__span-24-27"><a id="__codelineno-24-27" name="__codelineno-24-27" href="#__codelineno-24-27"></a>]B                  缓存切换到最后一个文件，即 :blast
+</span></code></pre></div>
+<h2 id="plugin-github-gavingvim-textobj-argument-text-object-like-motion-for-arguments">Plugin - <a href="https://github.com/gaving/vim-textobj-argument">GitHub - gaving/vim-textobj-argument: Text-object like motion for arguments</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>cia                 改写函数参数
+</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>caa                 改写函数参数（包括逗号分隔）
+</span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a>dia                 删除函数参数
+</span><span id="__span-25-4"><a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a>daa                 删除函数参数（包括逗号分隔）
+</span><span id="__span-25-5"><a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a>via                 选取函数参数
+</span><span id="__span-25-6"><a id="__codelineno-25-6" name="__codelineno-25-6" href="#__codelineno-25-6"></a>vaa                 选取函数参数（包括逗号分隔）
+</span><span id="__span-25-7"><a id="__codelineno-25-7" name="__codelineno-25-7" href="#__codelineno-25-7"></a>yia                 复制函数参数
+</span><span id="__span-25-8"><a id="__codelineno-25-8" name="__codelineno-25-8" href="#__codelineno-25-8"></a>yaa                 复制函数参数（包括逗号分隔）
+</span></code></pre></div>
+<h2 id="_19">网络资源</h2>
+<ul>
+<li>最新版本 https://github.com/vim/vim</li>
+<li>Windows 最新版 https://github.com/vim/vim-win32-installer/releases</li>
+<li>插件浏览 http://vimawesome.com</li>
+<li>reddit https://www.reddit.com/r/vim/</li>
+<li>正确设置 ALT/BS 键 https://skywind.me/blog/archives/2021</li>
+<li>视频教程 http://vimcasts.org/</li>
+<li>中文帮助 http://vimcdoc.sourceforge.net/doc/help.html</li>
+<li>中文版入门到精通 https://github.com/wsdjeg/vim-galore-zh_cn</li>
+<li>五分钟脚本入门 https://skywind.me/blog/archives/2193</li>
+<li>脚本精通 http://learnvimscriptthehardway.stevelosh.com/</li>
+<li>中文脚本帮助 vimcdoc.sourceforge.net/doc/eval.html</li>
+<li>十六年使用经验 http://zzapper.co.uk/vimtips.html</li>
+<li>配色方案 http://vimcolors.com/</li>
+</ul>
+<h2 id="tips">TIPS</h2>
+<ul>
+<li>永远不要用 <code>CTRL-C</code> 代替 <code>&lt;ESC&gt;</code> 完全不同的含义，容易错误中断运行的后台脚本</li>
+<li>很多人使用 <code>CTRL-[</code> 代替 <code>&lt;ESC&gt;</code>，左手小指 <code>CTRL</code>，右手小指 <code>[</code> 熟练后很方便</li>
+<li>某些终端中使用 Vim 8 内嵌终端如看到奇怪字符，使用 <code>:set t_RS= t_SH=</code> 解决</li>
+<li>某些终端中使用 Vim 8.2+ 会看到一些奇怪字符，使用 <code>:set t_TI= t_TE=</code> 解决</li>
+<li>某些终端中使用 NeoVim 如看到奇怪字符，使用 <code>:set guicursor=</code> 解决</li>
+<li>使用 MS-Terminal 如果进入 Vim/NVim 会默认替换模式设置 <code>:set t_u7=</code> 解决</li>
+<li>多使用 <code>ciw</code>, <code>ci[</code>, <code>ci"</code>, <code>ci(</code>以及<code>diw</code>, <code>di[</code>, <code>di"</code>, <code>di(</code> 命令来快速改写/删除文本</li>
+<li>在行内左右移动光标时，多使用<code>w b e</code>或<code>W B E</code>，而不是h l或方向键，这样会快很多</li>
+<li>SHIFT 相当于移动加速键， <code>w b e</code> 移动光标很慢，但是 <code>W B E</code> 走的很快</li>
+<li>自己要善于总结新技巧，比如移动到行首非空字符时用 <code>0w</code> 命令比 <code>^</code> 命令更容易输入</li>
+<li>在空白行使用 <code>dip</code> 命令可以删除所有临近的空白行，viw 可以选择连续空白</li>
+<li>缩进时使用 <code>&gt;8j  &gt;}  &lt;ap  &gt;ap  =i}  ==</code> 会方便很多</li>
+<li>插入模式下，当你发现一个单词写错了，应该多用 <code>CTRL-W</code> 这比 <code>&lt;BackSpace&gt;</code> 快</li>
+<li><code>y d c</code> 命令可以很好结合 <code>f t</code> 和 <code>/X</code> 比如 <code>dt)</code> 和 <code>y/end&lt;cr&gt;</code></li>
+<li><code>c d x</code> 命令会自动填充寄存器 <code>"1</code> 到 <code>"9</code> , <code>y</code> 命令会自动填充 <code>"0</code> 寄存器</li>
+<li>用 <code>v</code> 命令选择文本时，可以用 o 掉头选择，有时很有用</li>
+<li>写文章时，可以写一段代码块，然后选中后执行 <code>:!python</code> 代码块就会被替换成结果</li>
+<li>搜索后经常使用 <code>:nohl</code> 来消除高亮，使用很频繁，可以 map 到 <code>&lt;BackSpace&gt;</code> 上</li>
+<li>搜索时可以用 <code>CTRL-R CTRL-W</code> 插入光标下的单词，命令模式也能这么用</li>
+<li>映射按键时，应该默认使用 noremap ，只有特别需要的时候使用 map</li>
+<li>当你觉得做某事很低效时，你应该停下来，<code>u u u u</code> 然后思考正确的高效方式来完成</li>
+<li>用 y复制文本后，命令模式中 <code>CTRL-R</code> 然后按双引号 <code>0</code> 可以插入之前复制内容</li>
+<li>某些情况下 Vim 绘制高亮慢，滚屏刷新慢可以试试 <code>set re=1</code> 使用老的正则引擎</li>
+<li>Windows 下的 GVim 可以设置 <code>set rop=type:directx,renmode:5</code> 增强显示</li>
+</ul>
+<h1 id="references">References</h1>
+<ul>
+<li>https://github.com/groenewege/vimrc/blob/master/vim_cheat_sheet.txt</li>
+<li>http://blog.g-design.net/post/4789778607/vim-cheat-sheet</li>
+<li>http://www.keyxl.com/aaa8263/290/VIM-keyboard-shortcuts.htm</li>
+<li>http://jmcpherson.org/editing.html</li>
+<li>http://www.fprintf.net/vimCheatSheet.html</li>
+<li>http://www.ouyaoxiazai.com/article/24/654.html</li>
+<li>http://bbs.it-home.org/thread-80794-1-1.html</li>
+<li>http://www.lpfrx.com/wp-content/uploads/2008/09/vi.jpg</li>
+<li>http://michael.peopleofhonoronly.com/vim/</li>
+<li>https://github.com/hobbestigrou/vimtips-fortune/blob/master/fortunes/vimtips</li>
+<li>https://github.com/glts/vim-cottidie/blob/master/autoload/cottidie/tips</li>
+</ul>
+
+                
+
+  
+
+
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+    
+      <div class="md-copyright__highlight">
+        Copyright © 2025 [mathcourse-share]
+      </div>
+    
+    
+      Powered by
+      <a href="https://www.mkdocs.org/" target="_blank" rel="noopener">
+        MkDocs
+      </a>
+      with theme
+      <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+        Material
+      </a>
+      modified by
+      <a href="https://github.com/mathcourse-share.github.io" target="_blank" rel="noopener">
+        KeRan
+      </a>
+    
+</div>
+
+    
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+
+
+<h4>Cookie consent</h4>
+<p>We use cookies to recognize your repeated visits and preferences, as well as to measure the effectiveness of our documentation and whether users find what they're searching for. With your consent, you're helping us to make our documentation better. extra:</p>
+<input class="md-toggle" type="checkbox" id="__settings" >
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+    
+      
+    
+    
+      
+        
+  
+  
+    
+    
+  
+  <li class="task-list-item">
+    <label class="task-list-control">
+      <input type="checkbox" name="github" checked>
+      <span class="task-list-indicator"></span>
+      GitHub
+    </label>
+  </li>
+
+      
+    
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">同意</button>
+    
+    
+    
+  
+    
+    
+      <button type="reset" class="md-button md-button--primary">拒绝</button>
+    
+    
+  
+    
+    
+    
+      <label class="md-button" for="__settings">管理设定</label>
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout((function(){document.querySelector("[data-md-component=consent]").hidden=!1}),250);var form=document.forms.consent;for(var action of["submit","reset"])form.addEventListener(action,(function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map((function(e){return[e,!0]})))),location.hash="",location.reload()}))</script>
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["content.footnote.tooltips", "content.tabs.link", "content.tooltips", "navigation.instant"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.50899def.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../../../javascripts/tablesort.js"></script>
+      
+        <script src="../../../javascripts/consent.js"></script>
+      
+    
+  </body>
+</html>
